@@ -40,6 +40,38 @@ A web-based election management system for Jahangirnagar University that handles
 
 ### User Roles
 
+Summary
+Role System:
+
+Voter = Regular student (registers via public form)
+Candidate = Voter who nominates (no separate registration)
+Commissioner = Created manually by admin (for security)
+
+Login Process:
+
+Students → Register as voter → Can nominate to become candidate
+Commissioners → Created by admin → Login with provided credentials
+
+Update Documentation - Add this section to README.md:
+markdown## User Registration & Login
+
+### Students (Voters & Candidates)
+- Register through public registration page
+- All students get 'voter' role initially
+- To become a candidate: Login as voter → Go to "Apply for Election"
+- Submitting nomination makes you a candidate
+- No separate "candidate" login - use same voter credentials
+
+### Commissioners
+- Created manually by system administrator
+- Cannot self-register for security
+- Admin creates account with 'central_commissioner' or 'hall_commissioner' role
+- Login with provided credentials
+
+
+
+========================================================================================================================================================
+
 **1. Voter (Students)**
 - Register and login
 - View candidates for both elections
