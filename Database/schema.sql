@@ -236,6 +236,15 @@ CREATE TABLE notifications (
     INDEX idx_is_read (is_read)
 );
 
+
+CREATE TABLE departments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    department_name VARCHAR(100) NOT NULL UNIQUE,
+    faculty VARCHAR(100),
+    is_active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- =====================================================
 -- SAMPLE DATA INSERTION
 -- =====================================================
@@ -243,15 +252,79 @@ CREATE TABLE notifications (
 -- Insert Hall Information
 INSERT INTO halls (hall_name, hall_type, total_students) VALUES
 ('Al Beruni Hall', 'male', 650),
+('A F M Kamaluddin Hall', 'male', 600),
 ('Mir Mosharraf Hossain Hall', 'male', 580),
-('Begum Rokeya Hall', 'female', 520),
-('Shaheed Salam Barkat Hall', 'male', 600),
-('Maulana Bhashani Hall', 'male', 550),
+('Shaheed Salam-Barkat Hall', 'male', 600),
+('Mowlana Bhashani Hall', 'male', 550),
+('Shaheed Rafiq-Jabbar Hall', 'male', 620),
+('Male Student Hall No. - 10', 'male', 600),
+('Male Student Hall No. - 21', 'male', 550),
+('Jatiya Kabi Kazi Nazrul Islam Hall', 'male', 580),
+('Shaheed Taj Uddin Ahmad Hall', 'male', 580),
+('Bishwakabi Rabindranath Tagore Hall', 'male', 700),
+('Nawab Faizunnesa Hall', 'female', 520),
+('Jahanara Imam Hall', 'female', 500),
 ('Pritilata Hall', 'female', 480),
-('Bangamata Sheikh Fazilatunnesa Hall', 'female', 450),
-('Jahangirnagar Hall', 'male', 700),
-('Shahid Rafiq Jabbar Hall', 'male', 620),
-('Shaheed Taj Uddin Ahmad Hall', 'male', 580);
+('Begum Khaleda Zia Hall', 'female', 450),
+('Begum Sufia Kamal Hall', 'female', 450),
+('Female Student Hall No. - 13', 'female', 500),
+('Female Student Hall No. - 15', 'female', 480),
+('Rokeya Hall', 'female', 520),
+('Fazilatunnesa Hall', 'female', 500),
+('Bir Protik Taramon Bibi Hall', 'female', 480);
+
+INSERT INTO departments (department_name, faculty) VALUES
+-- Faculty of Mathematical and Physical Sciences
+('Department of Chemistry', 'Faculty of Mathematical and Physical Sciences'),
+('Department of Computer Science and Engineering', 'Faculty of Mathematical and Physical Sciences'),
+('Department of Environmental Sciences', 'Faculty of Mathematical and Physical Sciences'),
+('Department of Geological Sciences', 'Faculty of Mathematical and Physical Sciences'),
+('Department of Mathematics', 'Faculty of Mathematical and Physical Sciences'),
+('Department of Physics', 'Faculty of Mathematical and Physical Sciences'),
+('Department of Statistics and Data Science', 'Faculty of Mathematical and Physical Sciences'),
+
+-- Faculty of Social Sciences
+('Department of Anthropology', 'Faculty of Social Sciences'),
+('Department of Economics', 'Faculty of Social Sciences'),
+('Department of Geography and Environment', 'Faculty of Social Sciences'),
+('Department of Government and Politics', 'Faculty of Social Sciences'),
+('Department of Public Administration', 'Faculty of Social Sciences'),
+('Department of Urban and Regional Planning', 'Faculty of Social Sciences'),
+
+-- Faculty of Arts and Humanities
+('Department of Archaeology', 'Faculty of Arts and Humanities'),
+('Department of Bangla', 'Faculty of Arts and Humanities'),
+('Department of Drama and Dramatics', 'Faculty of Arts and Humanities'),
+('Department of English', 'Faculty of Arts and Humanities'),
+('Department of Fine Arts', 'Faculty of Arts and Humanities'),
+('Department of History', 'Faculty of Arts and Humanities'),
+('Department of International Relations', 'Faculty of Arts and Humanities'),
+('Department of Journalism and Media Studies', 'Faculty of Arts and Humanities'),
+('Department of Philosophy', 'Faculty of Arts and Humanities'),
+
+-- Faculty of Biological Sciences
+('Department of Biochemistry and Molecular Biology', 'Faculty of Biological Sciences'),
+('Department of Biotechnology and Genetic Engineering', 'Faculty of Biological Sciences'),
+('Department of Botany', 'Faculty of Biological Sciences'),
+('Department of Microbiology', 'Faculty of Biological Sciences'),
+('Department of Pharmacy', 'Faculty of Biological Sciences'),
+('Department of Public Health and Informatics', 'Faculty of Biological Sciences'),
+('Department of Zoology', 'Faculty of Biological Sciences'),
+
+-- Faculty of Business Studies
+('Department of Accounting and Information Systems', 'Faculty of Business Studies'),
+('Department of Finance and Banking', 'Faculty of Business Studies'),
+('Department of Management Studies', 'Faculty of Business Studies'),
+('Department of Marketing', 'Faculty of Business Studies'),
+
+-- Faculty of Law
+('Department of Law and Justice', 'Faculty of Law'),
+
+-- Institutes (treated as special faculties)
+('Institute of Business Administration (IBA-JU)', 'Institutes'),
+('Institute of Information Technology (IIT)', 'Institutes'),
+('Institute of Comparative Literature and Culture (CLC)', 'Institutes'),
+('Institute of Remote Sensing and GIS', 'Institutes');
 
 -- Insert JUCSU Positions (25 posts total)
 INSERT INTO positions (position_name, election_type, position_order) VALUES
@@ -308,6 +381,8 @@ INSERT INTO hall_positions (position_id, position_name, order_no) VALUES
 (13, 'Executive Member 1', 13),
 (14, 'Executive Member 2', 14),
 (15, 'Executive Member 3', 15);
+
+
 
 -- Insert Sample Election Schedule
 INSERT INTO election_schedule (election_type, academic_year, nomination_start, nomination_end, withdrawal_deadline, voting_date) VALUES
