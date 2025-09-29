@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: 16px;
 }
 
 main {
@@ -16,13 +17,77 @@ main {
 
 .navbar-brand {
     font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .card {
     border-radius: 10px;
     margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .btn {
     border-radius: 25px;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    h1, .display-4 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card-body h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Stack cards vertically on mobile */
+    .col-md-3, .col-md-4, .col-md-6 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Make buttons full width on mobile */
+    .btn-mobile-full {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Reduce padding on small screens */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+/* Make tables responsive */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Improve form inputs on mobile */
+.form-control, .form-select {
+    font-size: 16px; /* Prevents zoom on iOS */
 }
