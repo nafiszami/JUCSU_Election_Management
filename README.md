@@ -906,11 +906,6 @@ git push
 
 ## Contact & Support
 
-**Team Lead (Person 1):** [Your contact]
-
-**Daily Standup Time:** 9:00 PM (WhatsApp)
-
-**Weekly Meeting:** Every Saturday, 3:00 PM
 
 **Questions?** Ask in WhatsApp group anytime!
 
