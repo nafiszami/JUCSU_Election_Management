@@ -1,0 +1,28 @@
+/* css/style.css */
+:root {
+    --ju-green: #28a745;
+    --ju-gold: #ffc107;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border-radius: 25px;
+}
