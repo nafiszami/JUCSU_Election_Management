@@ -1,3 +1,4 @@
+```css
 /* css/style.css */
 :root {
     --ju-green: #28a745;
@@ -13,6 +14,11 @@ body {
 
 main {
     flex: 1;
+    margin-top: 30px !important; /* Ensure spacing below navbar */
+}
+
+.container-fluid {
+    padding-top: 20px !important; /* Additional spacing for content */
 }
 
 .navbar-brand {
@@ -34,6 +40,104 @@ main {
     padding: 0.75rem 1.5rem;
 }
 
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.progress {
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+.card-header {
+    background-color: var(--ju-green);
+    color: white;
+    font-weight: 500;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100vh;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar .nav-link {
+    font-size: 0.95rem;
+    color: #333;
+    padding: 10px 20px;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--ju-green);
+    color: white;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #f1f3f5;
+}
+
+.sidebar-heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+/* Table column styles for monitor.php */
+.col-candidate {
+    width: 50%;
+    max-width: 400px;
+}
+
+.col-hall {
+    width: 30%;
+    max-width: 200px;
+}
+
+.col-votes {
+    width: 20%;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Prevent text overflow */
+.table td, .table th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-brand {
@@ -52,15 +156,44 @@ main {
         font-size: 1.25rem;
     }
     
-    /* Stack cards vertically on mobile */
     .col-md-3, .col-md-4, .col-md-6 {
         margin-bottom: 1rem;
     }
     
-    /* Make buttons full width on mobile */
     .btn-mobile-full {
         width: 100%;
         margin-bottom: 0.5rem;
+    }
+    
+    .table th, .table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    
+    .col-candidate {
+        width: 45%;
+        max-width: 200px;
+    }
+    
+    .col-hall {
+        width: 30%;
+        max-width: 150px;
+    }
+    
+    .col-votes {
+        width: 25%;
+        min-width: 80px;
+    }
+    
+    .sidebar {
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .sidebar .nav-link {
+        font-size: 0.9rem;
+        padding: 8px 15px;
     }
 }
 
@@ -74,20 +207,34 @@ main {
         padding: 1rem;
     }
     
-    /* Reduce padding on small screens */
     .py-5 {
         padding-top: 2rem !important;
         padding-bottom: 2rem !important;
     }
-}
-
-/* Make tables responsive */
-.table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    
+    .table th, .table td {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+    
+    .col-candidate {
+        width: 50%;
+        max-width: 150px;
+    }
+    
+    .col-hall {
+        width: 30%;
+        max-width: 100px;
+    }
+    
+    .col-votes {
+        width: 20%;
+        min-width: 60px;
+    }
 }
 
 /* Improve form inputs on mobile */
 .form-control, .form-select {
     font-size: 16px; /* Prevents zoom on iOS */
 }
+```
