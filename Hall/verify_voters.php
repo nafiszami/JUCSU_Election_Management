@@ -1,3 +1,4 @@
+```php
 <?php
 // hall/verify_voters.php
 $page_title = "Hall Voter Verification";
@@ -112,7 +113,7 @@ if (isset($_POST['action']) && isset($_POST['voter_id'])) {
 
 // Fetch pending voters
 $stmt = $pdo->prepare("
-    SELECT id, university_id, full_name, department, enrollment_year, gender, dues_paid, phone, created_at
+    SELECT id, university_id, full_name, department, enrollment_year, gender, phone, created_at
     FROM users 
     WHERE hall_name = ? AND role = 'voter' AND is_verified = 0 AND is_active = 1
     ORDER BY created_at DESC
@@ -182,7 +183,6 @@ include '../includes/header.php';
                                 <th>Department</th>
                                 <th>Year</th>
                                 <th>Gender</th>
-                                <th>Dues</th>
                                 <th>Registered</th>
                                 <th style="width: 160px;">Actions</th>
                             </tr>
@@ -202,13 +202,6 @@ include '../includes/header.php';
                                 </td>
                                 <td><?php echo $voter['enrollment_year']; ?></td>
                                 <td><?php echo ucfirst($voter['gender']); ?></td>
-                                <td>
-                                    <?php if ($voter['dues_paid']): ?>
-                                        <span class="badge bg-success">Paid</span>
-                                    <?php else: ?>
-                                        <span class="badge bg-warning">Pending</span>
-                                    <?php endif; ?>
-                                </td>
                                 <td>
                                     <small class="text-muted">
                                         <?php echo date('M d, Y', strtotime($voter['created_at'])); ?>

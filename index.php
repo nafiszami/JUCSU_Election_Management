@@ -1,4 +1,4 @@
-```php
+
 <?php
 // index.php
 $page_title = "Home - JUCSU Election System";
@@ -59,4 +59,3 @@ include 'includes/header.php';
 </div>
 
 <?php include 'includes/footer.php'; ?>
-```

@@ -1,6 +1,6 @@
 -- =====================================================
 -- JUCSU and Hall Union Election Management System
--- FINAL CORRECTED DATABASE SCHEMA
+-- FINAL CORRECTED DATABASE SCHEMA (Updated)
 -- Jahangirnagar University
 -- Compatible with existing progress
 -- =====================================================
@@ -40,7 +40,7 @@ CREATE TABLE halls (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- =====================================================
--- 3. USERS TABLE
+-- 3. USERS TABLE (Updated: dues_paid removed)
 -- =====================================================
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -58,7 +58,6 @@ CREATE TABLE users (
     phone VARCHAR(15),
     
     -- Election Eligibility
-    dues_paid BOOLEAN DEFAULT FALSE,
     is_verified BOOLEAN DEFAULT FALSE,
     is_active BOOLEAN DEFAULT TRUE,
     
