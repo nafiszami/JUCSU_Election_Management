@@ -1,3 +1,4 @@
+```php
 <?php
 // admin/create_users_dashboard.php
 // SECURITY WARNING: Delete this file after creating test users!
@@ -23,17 +24,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $enrollment_year = $_POST['enrollment_year'];
         $gender = $_POST['gender'];
         $is_verified = isset($_POST['is_verified']) ? 1 : 0;
-        $dues_paid = isset($_POST['dues_paid']) ? 1 : 0;
         
         try {
             $stmt = $pdo->prepare("
                 INSERT INTO users (university_id, email, password, full_name, role, department, 
-                                 hall_name, enrollment_year, gender, is_verified, dues_paid, is_active)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
+                                 hall_name, enrollment_year, gender, is_verified, is_active)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
             ");
             
             $stmt->execute([$university_id, $email, $password, $full_name, $role, 
-                          $department, $hall_name, $enrollment_year, $gender, $is_verified, $dues_paid]);
+                          $department, $hall_name, $enrollment_year, $gender, $is_verified]);
             
             $success = "User created successfully: $university_id";
             $created_users[] = [
@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $stmt = $pdo->prepare("
                     INSERT IGNORE INTO users (university_id, email, password, full_name, role, department, 
-                                     hall_name, enrollment_year, gender, is_verified, dues_paid, is_active)
-                    VALUES (?, ?, ?, ?, 'voter', ?, ?, ?, ?, 1, 1, 1)
+                                     hall_name, enrollment_year, gender, is_verified, is_active)
+                    VALUES (?, ?, ?, ?, 'voter', ?, ?, ?, ?, 1, 1)
                 ");
                 
                 $stmt->execute([$university_id, $email, $password, $full_name, 
@@ -95,10 +95,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Create central commissioner
             $stmt = $pdo->prepare("
                 INSERT IGNORE INTO users (university_id, email, password, full_name, role, department, 
-                                 hall_name, enrollment_year, gender, is_verified, dues_paid, is_active)
+                                 hall_name, enrollment_year, gender, is_verified, is_active)
                 VALUES ('CENTRAL001', 'central@ju.ac.bd', ?, 'Dr. Central Commissioner', 
                        'central_commissioner', 'Department of Computer Science and Engineering', 
-                       'Al Beruni Hall', 2020, 'male', 1, 1, 1)
+                       'Al Beruni Hall', 2020, 'male', 1, 1)
             ");
             $stmt->execute([$password]);
             $created_users[] = [
@@ -120,9 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $stmt = $pdo->prepare("
                     INSERT IGNORE INTO users (university_id, email, password, full_name, role, department, 
-                                     hall_name, enrollment_year, gender, is_verified, dues_paid, is_active)
+                                     hall_name, enrollment_year, gender, is_verified, is_active)
                     VALUES (?, ?, ?, ?, 'hall_commissioner', 'Department of Economics', 
-                           ?, 2018, ?, 1, 1, 1)
+                           ?, 2018, ?, 1, 1)
                 ");
                 
                 $gender = $hall['hall_type'] === 'female' ? 'female' : 'male';
@@ -427,11 +427,6 @@ $stats = $stats_stmt->fetchAll(PDO::FETCH_KEY_PAIR);
                                         <input class="form-check-input" type="checkbox" name="is_verified" 
                                                id="is_verified" checked>
                                         <label class="form-check-label" for="is_verified">Verified</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="dues_paid" 
-                                               id="dues_paid" checked>
-                                        <label class="form-check-label" for="dues_paid">Dues Paid</label>
                                     </div>
                                 </div>
                             </div>
