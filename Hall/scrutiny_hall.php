@@ -42,9 +42,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && isset($_
     if ($action === 'approve') {
         $update_stmt->execute(['approved', null, $candidate_id, $hall_name]);
         $action_log = 'APPROVE_CANDIDATE';
+        
+        // Notify candidate
+        $stmt = $pdo->prepare("SELECT user_id FROM candidates WHERE id = ?");
+        $stmt->execute([$candidate_id]);
+        $user_id = $stmt->fetchColumn();
+        $stmt = $pdo->prepare("INSERT INTO notifications (user_id, title, message, type) VALUES (?, ?, ?, ?)");
+        $stmt->execute([
+            $user_id,
+            'Nomination Approved',
+            'Your nomination for hall election has been approved.',
+            'success'
+        ]);
     } elseif ($action === 'reject') {
         $update_stmt->execute(['rejected', $rejection_reason, $candidate_id, $hall_name]);
         $action_log = 'REJECT_CANDIDATE';
+        
+        // Notify candidate
+        $stmt = $pdo->prepare("SELECT user_id FROM candidates WHERE id = ?");
+        $stmt->execute([$candidate_id]);
+        $user_id = $stmt->fetchColumn();
+        $stmt = $pdo->prepare("INSERT INTO notifications (user_id, title, message, type) VALUES (?, ?, ?, ?)");
+        $stmt->execute([
+            $user_id,
+            'Nomination Rejected',
+            'Your nomination for hall election has been rejected. Reason: ' . $rejection_reason,
+            'error'
+        ]);
     }
     
     // Log action

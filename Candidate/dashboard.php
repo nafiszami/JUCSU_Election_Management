@@ -61,8 +61,8 @@ include '../includes/header.php';
                                             <td><?php echo htmlspecialchars($nomination['position_name']); ?></td>
                                             <td>
                                                 <?php
-                                                $manifesto = $nomination['manifesto'];
-                                                echo strlen($manifesto) > 100 ? htmlspecialchars(substr($manifesto, 0, 100)) . '...' : htmlspecialchars($manifesto);
+                                                $manifesto = $nomination['manifesto'] ?: 'No manifesto entered';
+                                                echo htmlspecialchars(strlen($manifesto) > 100 ? substr($manifesto, 0, 100) . '...' : $manifesto);
                                                 ?>
                                             </td>
                                             <td>
@@ -86,7 +86,6 @@ include '../includes/header.php';
                                                     <span class="text-muted">Awaiting review</span>
                                                     <a href="withdraw.php?candidate_id=<?php echo $nomination['id']; ?>" class="btn btn-sm btn-danger mt-1">Withdraw Nomination</a>
                                                 <?php elseif ($nomination['status'] === 'approved'): ?>
-                                                    <a href="../voter/candidates.php" class="btn btn-sm btn-info">View Election</a>
                                                     <a href="withdraw.php?candidate_id=<?php echo $nomination['id']; ?>" class="btn btn-sm btn-danger mt-1">Withdraw Nomination</a>
                                                 <?php elseif ($nomination['status'] === 'rejected'): ?>
                                                     <span class="text-danger">Contact commissioner</span>
