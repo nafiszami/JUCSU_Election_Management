@@ -1,3 +1,4 @@
+
 <?php
 // index.php
 $page_title = "Home - JUCSU Election System";
@@ -10,7 +11,7 @@ if (isLoggedIn()) {
 include 'includes/header.php';
 ?>
 
-<div class="row mb-5">
+<div class="row mb-5" style="margin-top: 30px;"> <!-- Inline margin-top for spacing -->
     <div class="col-12">
         <div class="card bg-success text-white">
             <div class="card-body text-center py-5">

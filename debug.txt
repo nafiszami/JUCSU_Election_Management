@@ -1,0 +1,4023 @@
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 2
+    [university_id] => HALL001
+    [role] => hall_commissioner
+    [full_name] => Prof. Commissioner Al Beruni Hall
+    [hall_name] => Al Beruni Hall
+)
+
