@@ -1,3 +1,4 @@
+
 # JUCSU Election System - Project Documentation v1.0
 
 **Project Name:** JUCSU and Hall Union Election Management System  
@@ -967,3 +968,9 @@ https://git-scm.com/doc
 **Status:** Week 1 Complete, Ready for Week 2
 
 Good luck team! Let's build something great together!
+=======
+<html>
+============ <h1> THIS BRANCH IS RESPONSIBLE FOR HALL COMMISSIONER MODULE </h1>========
+
+</html>
+

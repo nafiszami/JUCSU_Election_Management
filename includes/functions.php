@@ -1,3 +1,4 @@
+
 <?php
 // includes/functions.php - Common Functions
 if (session_status() === PHP_SESSION_NONE) {
@@ -24,7 +25,8 @@ function getCurrentUser() {
 // Check user role
 function hasRole($role) {
     if (!isLoggedIn()) return false;
-    return $_SESSION['role'] === $role;
+    $roles = (array)$role; // Convert to array to handle both string and array
+    return in_array($_SESSION['role'], $roles);
 }
 
 // Redirect based on role
