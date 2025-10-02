@@ -2,11 +2,12 @@
 session_start();
 if (!isset($_SESSION['commission_authenticated'])) {
     header("Location: login.php");
-    exi
+    exit;
+}
 
 //  middle side 
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-$allowed_pages = ['home','schedule','rules','approve_candidate','results','complaints','cancel_nomination','audit'];
+$allowed_pages = ['home','schedule','approve_candidate','results','complaints','cancel_nomination','audit'];
 if (!in_array($page, $allowed_pages)) $page = 'home';
 ?>
 <!DOCTYPE html>
@@ -21,8 +22,8 @@ if (!in_array($page, $allowed_pages)) $page = 'home';
 
     <!-- Header  side -->
     <div class="header">
-        <div style="flex:1;text-align:center;">Election commission</div>
-        <a href="logout.php" class="btn btn-success logout-btn">Logout</a>
+        <div style="flex:1;text-align:center;">Election Commission</div>
+        
     </div>
 
     <!-- Sidebar -->
@@ -39,7 +40,14 @@ if (!in_array($page, $allowed_pages)) $page = 'home';
     <div class="content">
         <?php
         if (file_exists("$page.php")) include "$page.php";
-        else echo "<p>Page not found.</p>";
+        else {
+            // Updated default message with specific class for styling
+            echo '
+            <div class="welcome-box mt-5 mx-auto p-4 alert alert-success text-center">
+                <p class="mb-0 fs-4 fw-bold"> Welcome, Commissioner. Please select an option from the sidebar to begin.</p>
+            </div>
+            ';
+        }
         ?>
     </div>
 
