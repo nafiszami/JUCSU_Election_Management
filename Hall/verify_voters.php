@@ -1,4 +1,4 @@
-```php
+
 <?php
 // hall/verify_voters.php
 $page_title = "Hall Voter Verification";
