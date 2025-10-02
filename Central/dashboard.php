@@ -1,53 +1,48 @@
 <?php
-// central/dashboard.php
-$page_title = "Central Commissioner Dashboard";
-require_once '../includes/check_auth.php';
-requireRole('central_commissioner');
+session_start();
+if (!isset($_SESSION['commission_authenticated'])) {
+    header("Location: login.php");
+    exi
 
-$current_user = getCurrentUser();
-include '../includes/header.php';
+//  middle side 
+$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+$allowed_pages = ['home','schedule','rules','approve_candidate','results','complaints','cancel_nomination','audit'];
+if (!in_array($page, $allowed_pages)) $page = 'home';
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Election Commission</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="row">
-    <div class="col-12">
-        <h2>Central Election Commission Dashboard</h2>
-        <p>Welcome, <?php echo htmlspecialchars($current_user['full_name']); ?></p>
+    <!-- Header  side -->
+    <div class="header">
+        <div style="flex:1;text-align:center;">Election commission</div>
+        <a href="logout.php" class="btn btn-success logout-btn">Logout</a>
     </div>
-</div>
 
-<div class="row">
-    <div class="col-md-3">
-        <div class="card text-white bg-success">
-            <div class="card-body">
-                <h3>12,450</h3>
-                <p>Total Voters</p>
-            </div>
-        </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="dashboard.php?page=schedule" <?= $page === 'schedule' ? 'aria-current="page"' : '' ?>>Schedule Election</a>
+        <a href="dashboard.php?page=approve_candidate" <?= $page === 'approve_candidate' ? 'aria-current="page"' : '' ?>>Approve Candidate</a>
+         <a href="dashboard.php?page=cancel_nomination" <?= $page === 'cancel_nomination' ? 'aria-current="page"' : '' ?>>Cancel Nomination</a>
+        <a href="dashboard.php?page=result" <?= $page === 'result' ? 'aria-current="page"' : '' ?>>See Result</a>
+        <a href="dashboard.php?page=complaints" <?= $page === 'complaints' ? 'aria-current="page"' : '' ?>>Complaints</a>
+        <a href="dashboard.php?page=audit" <?= $page === 'audit' ? 'aria-current="page"' : '' ?>>Audit Logs</a>
     </div>
-    <div class="col-md-3">
-        <div class="card text-white bg-warning">
-            <div class="card-body">
-                <h3>132</h3>
-                <p>JUCSU Candidates</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card text-white bg-info">
-            <div class="card-body">
-                <h3>443</h3>
-                <p>Hall Candidates</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card text-white bg-danger">
-            <div class="card-body">
-                <h3>21</h3>
-                <p>Halls</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<?php include '../includes/footer.php'; ?>
+    <!-- Middle Content -->
+    <div class="content">
+        <?php
+        if (file_exists("$page.php")) include "$page.php";
+        else echo "<p>Page not found.</p>";
+        ?>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
