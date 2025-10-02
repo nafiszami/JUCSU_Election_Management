@@ -153,7 +153,7 @@ include '../includes/header.php';
     <div class="col-12 col-lg-8 mb-4">
         <div class="card">
             <div class="card-header bg-warning text-dark">
-                <h5 class="mb-0">Hall Management</h5>
+                <h5 class="mb-0 text-white">Hall Management</h5>
             </div>
             <div class="card-body">
                 <div class="row">
