@@ -61,6 +61,60 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
     $turnout = $total_voters > 0 ? round(($total_voters_voted / $total_voters) * 100, 2) : 0;
     fputcsv($output, ['Voter Turnout (%)', $turnout]);
 
+    // Voters List
+    fputcsv($output, []);
+    fputcsv($output, ['Voters List']);
+    fputcsv($output, ['Full Name', 'University ID', 'Hall', 'Email', 'Enrollment Year', 'Verification Status']);
+    $stmt = $pdo->prepare("
+        SELECT full_name, university_id, hall_name, email, enrollment_year, is_verified
+        FROM users
+        WHERE role = 'voter' AND (? IS NULL OR hall_name = ?)
+        ORDER BY hall_name, full_name
+    ");
+    $stmt->execute([$hall_name, $hall_name]);
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        fputcsv($output, [
+            $row['full_name'], $row['university_id'], $row['hall_name'] ?? 'N/A',
+            $row['email'], $row['enrollment_year'], $row['is_verified'] ? 'Yes' : 'No'
+        ]);
+    }
+
+    // Approved Voters
+    fputcsv($output, []);
+    fputcsv($output, ['Approved Voters']);
+    fputcsv($output, ['Full Name', 'University ID', 'Hall', 'Email', 'Enrollment Year']);
+    $stmt = $pdo->prepare("
+        SELECT full_name, university_id, hall_name, email, enrollment_year
+        FROM users
+        WHERE role = 'voter' AND is_verified = 1 AND (? IS NULL OR hall_name = ?)
+        ORDER BY hall_name, full_name
+    ");
+    $stmt->execute([$hall_name, $hall_name]);
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        fputcsv($output, [
+            $row['full_name'], $row['university_id'], $row['hall_name'] ?? 'N/A',
+            $row['email'], $row['enrollment_year']
+        ]);
+    }
+
+    // Rejected Voters
+    fputcsv($output, []);
+    fputcsv($output, ['Rejected Voters']);
+    fputcsv($output, ['Full Name', 'University ID', 'Hall', 'Email', 'Enrollment Year']);
+    $stmt = $pdo->prepare("
+        SELECT full_name, university_id, hall_name, email, enrollment_year
+        FROM users
+        WHERE role = 'voter' AND is_verified = 0 AND (? IS NULL OR hall_name = ?)
+        ORDER BY hall_name, full_name
+    ");
+    $stmt->execute([$hall_name, $hall_name]);
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        fputcsv($output, [
+            $row['full_name'], $row['university_id'], $row['hall_name'] ?? 'N/A',
+            $row['email'], $row['enrollment_year']
+        ]);
+    }
+
     // Audit Logs
     fputcsv($output, []);
     fputcsv($output, ['Audit Logs']);
@@ -108,6 +162,36 @@ $stmt->execute([$hall_name, $hall_name]);
 $total_voters_voted = $stmt->fetch(PDO::FETCH_ASSOC)['total_voters_voted'];
 
 $turnout_percentage = $total_voters > 0 ? ($total_voters_voted / $total_voters) * 100 : 0;
+
+// Fetch voters list
+$stmt = $pdo->prepare("
+    SELECT full_name, university_id, hall_name, email, enrollment_year, is_verified
+    FROM users
+    WHERE role = 'voter' AND (? IS NULL OR hall_name = ?)
+    ORDER BY hall_name, full_name
+");
+$stmt->execute([$hall_name, $hall_name]);
+$voters_list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Fetch approved voters
+$stmt = $pdo->prepare("
+    SELECT full_name, university_id, hall_name, email, enrollment_year
+    FROM users
+    WHERE role = 'voter' AND is_verified = 1 AND (? IS NULL OR hall_name = ?)
+    ORDER BY hall_name, full_name
+");
+$stmt->execute([$hall_name, $hall_name]);
+$approved_voters = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Fetch rejected voters
+$stmt = $pdo->prepare("
+    SELECT full_name, university_id, hall_name, email, enrollment_year
+    FROM users
+    WHERE role = 'voter' AND is_verified = 0 AND (? IS NULL OR hall_name = ?)
+    ORDER BY hall_name, full_name
+");
+$stmt->execute([$hall_name, $hall_name]);
+$rejected_voters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Fetch audit logs
 $stmt = $pdo->prepare("
@@ -175,6 +259,104 @@ include '../includes/header.php';
         </div>
     </div>
 
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Voters List</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>University ID</th>
+                            <th>Hall</th>
+                            <th>Email</th>
+                            <th>Enrollment Year</th>
+                            <th>Verification Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($voters_list as $voter): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($voter['full_name']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['university_id']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['hall_name'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($voter['email']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['enrollment_year']); ?></td>
+                                <td><?php echo $voter['is_verified'] ? 'Yes' : 'No'; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Approved Voters</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>University ID</th>
+                            <th>Hall</th>
+                            <th>Email</th>
+                            <th>Enrollment Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($approved_voters as $voter): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($voter['full_name']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['university_id']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['hall_name'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($voter['email']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['enrollment_year']); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5 class="mb-0">Rejected Voters</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>University ID</th>
+                            <th>Hall</th>
+                            <th>Email</th>
+                            <th>Enrollment Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($rejected_voters as $voter): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($voter['full_name']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['university_id']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['hall_name'] ?? 'N/A'); ?></td>
+                                <td><?php echo htmlspecialchars($voter['email']); ?></td>
+                                <td><?php echo htmlspecialchars($voter['enrollment_year']); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <div class="card">
         <div class="card-header">
             <h5 class="mb-0">Recent Audit Logs (Last 50)</h5>
@@ -211,4 +393,3 @@ include '../includes/header.php';
 </div>
 
 <?php include '../includes/footer.php'; ?>
-```
