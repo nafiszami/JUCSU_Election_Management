@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # JUCSU Election System - Project Documentation v1.0
 
 **Project Name:** JUCSU and Hall Union Election Management System  
