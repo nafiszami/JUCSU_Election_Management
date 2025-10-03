@@ -4471,3 +4471,48 @@ Reports.php Session: Array
     [hall_name] => Al Beruni Hall
 )
 
+Monitor.php Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+)
+
+Monitor.php Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+)
+
+Reports.php Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+)
+

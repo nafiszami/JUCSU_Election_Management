@@ -1,4 +1,3 @@
-
 <?php
 // includes/header.php
 ini_set('display_errors', 1);
@@ -30,7 +29,7 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <?php if (isLoggedIn()): ?>
-                        <?php if (hasRole(['hall_commissioner', 'central_commissioner'])): ?>
+                        <?php if (hasRole(['hall_commissioner'])): ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="/JUCSU_Election_Management/hall/verify_voters.php">Verify Voters</a>
                             </li>
@@ -62,4 +61,3 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
         </div>
     </nav>
     <main class="container-fluid">
-
