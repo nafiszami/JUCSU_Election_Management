@@ -5,9 +5,7 @@ if (!isset($pdo)) {
     return;
 }
 
-// ----------------------------------------------------------------------
-// 1. Remove duplicate PHP logic (It was fully duplicated in your original)
-// ----------------------------------------------------------------------
+
 
 // CSRF token is assumed to be handled in the main dashboard or this file is standalone. 
 // We will keep the CSRF logic here for security.
@@ -27,7 +25,7 @@ if (isset($_SESSION['flash_message'])) {
 // file, it's correct. We'll assume it's included and remove the redirect to dashboard.php.
 // if (!isset($_SESSION['commission_authenticated'])) { /* ... */ }
 
-// Cancel Nomination logic (remains mostly the same, now consolidated)
+// Cancel Nomination logic 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'reject') {
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
         // Prevent script execution on CSRF failure
@@ -51,9 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     }
 }
 
-// ----------------------------------------------------------------------
-// 2. Fetch approved candidates (CRITICAL: SQL looks fine, assumes data exists)
-// ----------------------------------------------------------------------
+
 $approved_stmt = $pdo->query(
     "SELECT 
         c.id, u.full_name, u.enrollment_year, u.department, u.hall_name, p.position_name
@@ -67,7 +63,14 @@ $approved_candidates = $approved_stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container-fluid">
-    <h3 class="mb-4 text-danger">❌ Cancel Nomination</h3>
+<div class="mx-auto" style="max-width: 800px;">
+    <h3 class="mb-4 bg-warning text-white text-center p-3">
+        ❌ Cancel Nomination
+    </h3>
+</div>
+
+
+
 
     <?php if ($message): ?>
         <div class="alert alert-info"><?= htmlspecialchars($message) ?></div>
