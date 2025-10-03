@@ -1,0 +1,800 @@
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b9b3081e2e9968f5e5ab55c3cd83375f454062546f24871c865b328ee2d3d162
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
+Dashboard Session: Array
+(
+    [user_id] => 1
+    [university_id] => CENTRAL001
+    [role] => central_commissioner
+    [full_name] => Dr. Central Commissioner
+    [hall_name] => Al Beruni Hall
+    [csrf_token] => b7d6a105d30de0935ec2fcfbdf788e2e75e7de7873a251db9bf6f31ef6233941
+)
+
