@@ -175,7 +175,7 @@ $progress_stmt = $pdo->prepare("
 $progress_stmt->execute([$election_type]);
 $voting_progress = $progress_stmt->fetchAll();
 
-// Check if already completed voting
+// Check if already completed voting (no longer used for notification)
 $has_voted = ($election_type === 'jucsu' && $current_user['has_voted_jucsu']) ||
              ($election_type === 'hall' && $current_user['has_voted_hall']);
 
@@ -532,12 +532,6 @@ include '../includes/header.php';
         </div>
     <?php endif; ?>
 
-    <?php if ($has_voted): ?>
-        <div class="alert alert-info">
-            <i class="bi bi-info-circle"></i> You have completed voting for this election!
-        </div>
-    <?php endif; ?>
-
     <div class="voting-container">
         <!-- Left Section - Positions -->
         <div class="left-section">
@@ -547,7 +541,7 @@ include '../includes/header.php';
                 </div>
                 <?php foreach ($positions as $position): ?>
                     <?php $is_voted = in_array($position['id'], $voted_positions); ?>
-                    <a href="#" 
+                    <a href="?type=<?php echo $election_type; ?>&position_id=<?php echo $position['id']; ?>" 
                        class="position-link <?php echo $is_voted ? 'voted' : ''; ?>" 
                        data-position-id="<?php echo $position['id']; ?>"
                        data-position-name="<?php echo htmlspecialchars($position['position_name']); ?>">
@@ -729,7 +723,7 @@ function createCandidateCard(candidate, positionId, isVoted) {
     
     const photoHtml = candidate.photo_path 
         ? `<img src="../${candidate.photo_path}" class="candidate-photo" alt="${candidate.full_name}">`
-        : `<div class="candidate-photo-placeholder">${candidate.full_name.split(' ').map(n => n[0]).join('').substring(0, 2)}</div>`;
+        : `<div class="candidate-photo-placeholder"><i class="bi bi-person-circle"></i></div>`;
     
     const voteButtonHtml = isVoted 
         ? '<span class="voted-badge"><i class="bi bi-check-circle"></i> Already Voted</span>'
