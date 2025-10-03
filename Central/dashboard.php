@@ -4,11 +4,6 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-if (!isset($_SESSION['commission_authenticated'])) {
-    header("Location: login.php");
-    exit;
-}
-
 // =======================================================
 //  1. INCLUDE DATABASE CONNECTION (CRITICAL FIX)
 // =======================================================
