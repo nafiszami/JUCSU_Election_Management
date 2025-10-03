@@ -32,16 +32,17 @@ $positions = $pdo->prepare("SELECT id, position_name FROM positions WHERE electi
 $positions->execute([$election_type]);
 $positions = $positions->fetchAll();
 
+$hall_name = $election_type === 'hall' ? $current_user['hall_name'] : null;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $position_id = (int)$_POST['position_id'];
         $manifesto = sanitizeInput($_POST['manifesto'] ?? '');
         $proposer_id = sanitizeInput($_POST['proposer_id'] ?? '');
         $seconder_id = sanitizeInput($_POST['seconder_id'] ?? '');
-        $hall_name = $election_type === 'hall' ? sanitizeInput($_POST['hall_name'] ?? '') : null;
 
         // Validate inputs
-        if (empty($position_id) || empty($manifesto) || empty($proposer_id) || empty($seconder_id) || ($election_type === 'hall' && empty($hall_name))) {
+        if (empty($position_id) || empty($manifesto) || empty($proposer_id) || empty($seconder_id)) {
             $error = "All fields are required.";
         } elseif (strlen($manifesto) > 5000) {
             $error = "Manifesto is too long (max 5000 characters).";
@@ -64,8 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             // Validate hall for hall election
-            if ($election_type === 'hall' && ($proposer['hall_name'] !== $hall_name || $seconder['hall_name'] !== $hall_name || $current_user['hall_name'] !== $hall_name)) {
-                $error = "Candidate, proposer, and seconder must be from the same hall for hall elections.";
+            if ($election_type === 'hall' && ($proposer['hall_name'] !== $hall_name || $seconder['hall_name'] !== $hall_name)) {
+                $error = "Proposer and seconder must be from the same hall for hall elections.";
             }
 
             // Validate position
@@ -172,17 +173,7 @@ include '../includes/header.php';
                     <?php if ($election_type === 'hall'): ?>
                         <div class="mb-4">
                             <label for="hall_name" class="form-label fw-bold"><i class="bi bi-building me-2"></i>Hall</label>
-                            <select class="form-select" id="hall_name" name="hall_name" required>
-                                <option value="" disabled selected>Select your hall</option>
-                                <?php
-                                $halls = $pdo->query("SELECT hall_name FROM halls WHERE is_active = 1 ORDER BY hall_name")->fetchAll();
-                                foreach ($halls as $hall):
-                                ?>
-                                    <option value="<?php echo htmlspecialchars($hall['hall_name']); ?>">
-                                        <?php echo htmlspecialchars($hall['hall_name']); ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
+                            <input type="text" class="form-control" id="hall_name" name="hall_name" value="<?php echo htmlspecialchars($hall_name); ?>" readonly>
                         </div>
                     <?php endif; ?>
 

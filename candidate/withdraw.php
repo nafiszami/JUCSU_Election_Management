@@ -20,24 +20,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$nomination) {
             $error = "Invalid nomination or not eligible for withdrawal.";
         } else {
-            // Check if nomination phase is active
-            $stmt = $pdo->prepare("SELECT current_phase FROM election_schedule WHERE election_type = ? AND is_active = 1");
+            // Check if within withdrawal deadline
+            $stmt = $pdo->prepare("SELECT withdrawal_deadline FROM election_schedule WHERE election_type = ? AND is_active = 1");
             $stmt->execute([$nomination['election_type']]);
-            if ($stmt->fetchColumn() !== 'nomination') {
-                $error = "Nominations cannot be withdrawn outside the nomination phase.";
+            $deadline = $stmt->fetchColumn();
+            if (!$deadline || date('Y-m-d') > $deadline) {
+                $error = "The withdrawal deadline has passed.";
             } else {
                 // Update nomination status to withdrawn
-                $stmt = $pdo->prepare("UPDATE candidates SET status = 'withdrawn' WHERE id = ?");
+                $stmt = $pdo->prepare("UPDATE candidates SET status = 'withdrawn', withdrawn_at = CURRENT_TIMESTAMP WHERE id = ?");
                 $stmt->execute([$candidate_id]);
 
-                // Add notification
+                // Notify user
                 $stmt = $pdo->prepare("INSERT INTO notifications (user_id, title, message, type) VALUES (?, ?, ?, ?)");
                 $stmt->execute([
                     $current_user['id'],
                     'Nomination Withdrawn',
-                    'Your nomination for ' . $nomination['election_type'] . ' has been withdrawn.',
+                    'Your nomination for ' . ucfirst($nomination['election_type']) . ' has been withdrawn.',
                     'info'
                 ]);
+
+                // Notify commissioner
+                $commissioner_role = $nomination['election_type'] === 'jucsu' ? 'central_commissioner' : 'hall_commissioner';
+                $stmt = $pdo->prepare("SELECT id FROM users WHERE role = ?");
+                $stmt->execute([$commissioner_role]);
+                while ($commissioner = $stmt->fetch()) {
+                    $stmt = $pdo->prepare("INSERT INTO notifications (user_id, title, message, type) VALUES (?, ?, ?, ?)");
+                    $stmt->execute([
+                        $commissioner['id'],
+                        'Candidate Withdrawal',
+                        $current_user['full_name'] . ' has withdrawn their nomination for ' . ucfirst($nomination['election_type']) . '.',
+                        'warning'
+                    ]);
+                }
 
                 $success = "Nomination withdrawn successfully.";
             }
