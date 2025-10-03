@@ -164,20 +164,10 @@ $voters_participated = $voted_count_stmt->fetchColumn();
 
 $participation_rate = $total_voters > 0 ? round(($voters_participated / $total_voters) * 100) : 0;
 
-// Get voting progress over time (last 7 days)
-$progress_stmt = $pdo->prepare("
-    SELECT DATE(voted_at) as vote_date, COUNT(DISTINCT voter_id) as voter_count
-    FROM votes
-    WHERE election_type = ? AND voted_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
-    GROUP BY DATE(voted_at)
-    ORDER BY vote_date
-");
-$progress_stmt->execute([$election_type]);
-$voting_progress = $progress_stmt->fetchAll();
-
-// Check if already completed voting (no longer used for notification)
-$has_voted = ($election_type === 'jucsu' && $current_user['has_voted_jucsu']) ||
-             ($election_type === 'hall' && $current_user['has_voted_hall']);
+$total_positions = count($positions);
+$voted_positions_count = count($voted_positions);
+$pending_positions = $total_positions - $voted_positions_count;
+$voting_percentage = $total_positions > 0 ? round(($voted_positions_count / $total_positions) * 100) : 0;
 
 include '../includes/header.php';
 ?>
@@ -203,7 +193,7 @@ include '../includes/header.php';
 .position-sidebar {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
@@ -260,22 +250,24 @@ include '../includes/header.php';
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     margin-bottom: 30px;
 }
 
 .stat-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .stat-card.green {
@@ -294,41 +286,128 @@ include '../includes/header.php';
 }
 
 .stat-icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 15px;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 1rem;
     opacity: 0.9;
 }
 
-.chart-container {
-    background: white;
-    border-radius: 15px;
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.voting-status-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.chart-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #333;
+.voting-status-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
 }
 
-.progress-chart {
-    height: 300px;
-    background: linear-gradient(to bottom, #e3f2fd 0%, #ffffff 100%);
-    border-radius: 10px;
-    padding: 20px;
+.voting-status-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.progress-ring {
     position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 25px;
+}
+
+.progress-ring__circle-bg {
+    fill: none;
+    stroke: #e9ecef;
+    stroke-width: 12;
+    opacity: 0.5;
+}
+
+.progress-ring__circle-fg {
+    fill: none;
+    stroke: linear-gradient(135deg, #28a745, #20c997);
+    stroke-width: 12;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.progress-ring__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.progress-ring__text small {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.progress-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    transition: transform 0.3s;
+}
+
+.detail-item:hover {
+    transform: scale(1.1);
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+}
+
+.detail-item.voted i {
+    color: #28a745;
+}
+
+.detail-item.pending i {
+    color: #ff6b6b;
 }
 
 /* Candidates View */
@@ -346,7 +425,7 @@ include '../includes/header.php';
     padding: 20px 30px;
     border-radius: 15px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
 }
 
 .position-title-bar h3 {
@@ -360,17 +439,18 @@ include '../includes/header.php';
 }
 
 .candidate-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
     transition: all 0.3s;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
 }
 
 .candidate-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     border-color: #28a745;
 }
 
@@ -414,7 +494,7 @@ include '../includes/header.php';
 .candidate-name {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #333;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
@@ -430,13 +510,14 @@ include '../includes/header.php';
 }
 
 .manifesto-preview {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 10px;
     border-left: 4px solid #28a745;
     margin-top: 15px;
     max-height: 100px;
     overflow: hidden;
+    backdrop-filter: blur(5px);
 }
 
 .vote-button {
@@ -453,7 +534,7 @@ include '../includes/header.php';
 }
 
 .vote-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
 }
 
@@ -474,9 +555,10 @@ include '../includes/header.php';
 .empty-state {
     text-align: center;
     padding: 60px 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
 }
 
 .empty-ballot-box {
@@ -486,13 +568,13 @@ include '../includes/header.php';
 
 .empty-title {
     font-size: 1.8rem;
-    color: #666;
+    color: #2c3e50;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
 .empty-text {
-    color: #999;
+    color: #666;
     font-size: 1.1rem;
     margin-bottom: 0;
 }
@@ -574,15 +656,33 @@ include '../includes/header.php';
                     
                     <div class="stat-card purple">
                         <div class="stat-icon"><i class="bi bi-list-check"></i></div>
-                        <div class="stat-number"><?php echo count($positions); ?></div>
+                        <div class="stat-number"><?php echo $total_positions; ?></div>
                         <div class="stat-label">Total Positions</div>
                     </div>
                 </div>
 
-                <div class="chart-container">
-                    <h3 class="chart-title">Voting Progress (Last 7 Days)</h3>
-                    <div class="progress-chart">
-                        <canvas id="votingChart"></canvas>
+                <div class="voting-status-card">
+                    <h3>Voting Progress</h3>
+                    <div class="progress-ring">
+                        <svg class="progress-ring__circle-bg" width="200" height="200">
+                            <circle cx="100" cy="100" r="90" />
+                        </svg>
+                        <svg class="progress-ring__circle" width="200" height="200">
+                            <circle class="progress-ring__circle-fg" cx="100" cy="100" r="90" />
+                        </svg>
+                        <div class="progress-ring__text">
+                            <?php echo $voting_percentage; ?><br><small>%</small>
+                        </div>
+                    </div>
+                    <div class="progress-details">
+                        <div class="detail-item voted">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Voted: <?php echo $voted_positions_count; ?></span>
+                        </div>
+                        <div class="detail-item pending">
+                            <i class="bi bi-exclamation-circle-fill"></i>
+                            <span>Pending: <?php echo $pending_positions; ?></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -602,43 +702,14 @@ include '../includes/header.php';
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-// Voting progress data
-const votingData = <?php echo json_encode($voting_progress); ?>;
-const labels = votingData.map(d => d.vote_date);
-const data = votingData.map(d => d.voter_count);
+const totalPositions = <?php echo $total_positions; ?>;
+const votedPositions = <?php echo $voted_positions_count; ?>;
+const votingPercentage = <?php echo $voting_percentage; ?>;
+const circumference = 2 * Math.PI * 90;
+const circle = document.querySelector('.progress-ring__circle-fg');
 
-// Create chart
-const ctx = document.getElementById('votingChart');
-if (ctx) {
-    new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Voters',
-                data: data,
-                borderColor: '#28a745',
-                backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                tension: 0.4,
-                fill: true
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-}
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = circumference - (votingPercentage / 100) * circumference;
 
 // Position click handler
 document.querySelectorAll('.position-link').forEach(link => {
