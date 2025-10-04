@@ -211,7 +211,7 @@ include '../includes/header.php';
     .sidebar {
         min-width: 280px;
         max-width: 280px;
-        height: 100vh;
+         height: calc(100vh - 70px);
         position: fixed;
         top: 0;
         left: 0;
