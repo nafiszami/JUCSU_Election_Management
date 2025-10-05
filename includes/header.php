@@ -16,12 +16,29 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="/JUCSU_Election_Management/css/style.css" rel="stylesheet">
+
+    <style>
+        .navbar-brand .logo-img {
+            height: 40px; /* Adjust height as needed */
+            margin-right: 10px; /* Space between logo and text, if you add text */
+            vertical-align: middle; /* Align nicely with any adjacent text */
+        }
+        /* If you keep text next to the logo, you might want to adjust font size or weight */
+        .navbar-brand .logo-text {
+            font-weight: bold;
+            color: white; /* Or your brand color */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container">
+            
             <a class="navbar-brand" href="/JUCSU_Election_Management/">
-                <i class="bi bi-ballot-check"></i> JUCSU Election
+                <img src="assets/picture/ju_logo.png" 
+                     alt="JUCSU Election Logo" 
+                     class="logo-img">
+                <span class="logo-text d-none d-sm-inline">JUCSU Election</span> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
