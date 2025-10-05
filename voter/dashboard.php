@@ -86,7 +86,7 @@ include '../includes/header.php';
                         <a href="vote.php?type=hall" class="btn btn-warning btn-sm">
                             <i class="bi bi-building"></i> Vote Hall
                         </a>
-                        <a href="candidates.php" class="btn btn-info btn-sm" target="_blank">
+                        <a href="candidates.php" class="btn btn-info btn-sm">
                             <i class="bi bi-people"></i> View Candidates
                         </a>
                         <a href="complaint.php" class="btn btn-danger btn-sm">
