@@ -144,11 +144,6 @@ CREATE TABLE candidates (
         CHECK (proposer_id != seconder_id),
     CONSTRAINT chk_not_self_propose 
         CHECK (proposer_id != user_id AND seconder_id != user_id),
-    CONSTRAINT chk_election_hall_match 
-        CHECK (
-            (election_type = 'jucsu' AND hall_name IS NULL) OR 
-            (election_type = 'hall' AND hall_name IS NOT NULL)
-        ),
     
     -- Unique Constraints: One candidate per position
     UNIQUE KEY unique_jucsu_candidate (user_id, position_id),
