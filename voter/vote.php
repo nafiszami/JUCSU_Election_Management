@@ -15,7 +15,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'get_candidates') {
     $election_type = $_GET['election_type'] ?? 'jucsu';
     
     if (!$position_id) {
-        echo json_encode(['error' => false, 'candidates' => []]);
+        echo json_encode(['error' => true, 'message' => 'Position ID is required', 'candidates' => []]);
         exit;
     }
     
@@ -36,7 +36,10 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'get_candidates') {
                        u.full_name, u.university_id, u.department, u.hall_name as candidate_hall
                 FROM candidates c
                 JOIN users u ON c.user_id = u.id
-                WHERE c.position_id = ? AND c.election_type = 'hall' AND c.hall_name = ? AND c.status = 'approved'
+                WHERE c.position_id = ? 
+                  AND c.election_type = 'hall' 
+                  AND (c.hall_name = ? OR c.hall_name IS NULL) 
+                  AND c.status = 'approved'
                 ORDER BY u.full_name
             ");
             $stmt->execute([$position_id, $current_user['hall_name']]);
@@ -46,7 +49,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === 'get_candidates') {
         echo json_encode(['error' => false, 'candidates' => $candidates]);
         
     } catch (Exception $e) {
-        echo json_encode(['error' => false, 'candidates' => []]);
+        error_log("Vote.php AJAX Error: " . $e->getMessage());
+        echo json_encode(['error' => true, 'message' => 'Failed to load candidates', 'candidates' => []]);
     }
     exit;
 }
@@ -71,7 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['candidate_id'])) {
         $pdo->beginTransaction();
         
         // Check if already voted for this position
-        $check_stmt = $pdo->prepare("SELECT id FROM votes WHERE voter_id = ? AND position_id = ? AND election_type = ?");
+        $check_stmt = $pdo->prepare("
+            SELECT id FROM votes 
+            WHERE voter_id = ? AND position_id = ? AND election_type = ?
+        ");
         $check_stmt->execute([$current_user['id'], $position_id, $election_type]);
         
         if ($check_stmt->fetch()) {
@@ -81,8 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['candidate_id'])) {
         // Verify candidate
         $verify_stmt = $pdo->prepare("
             SELECT id FROM candidates 
-            WHERE id = ? AND position_id = ? AND status = 'approved' AND election_type = ?
-            " . ($election_type === 'hall' ? "AND hall_name = ?" : "")
+            WHERE id = ? 
+              AND position_id = ? 
+              AND status = 'approved' 
+              AND election_type = ?
+              " . ($election_type === 'hall' ? "AND (hall_name = ? OR hall_name IS NULL)" : "")
         );
         
         $params = [$candidate_id, $position_id, $election_type];
@@ -93,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['candidate_id'])) {
         $verify_stmt->execute($params);
         
         if (!$verify_stmt->fetch()) {
-            throw new Exception("Invalid candidate selection!");
+            throw new Exception("Invalid candidate selection! Only approved candidates are eligible.");
         }
         
         // Insert vote
@@ -113,16 +123,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['candidate_id'])) {
         ]);
         
         // Check if all positions voted
-        $count_stmt = $pdo->prepare("SELECT COUNT(DISTINCT position_id) FROM votes WHERE voter_id = ? AND election_type = ?");
+        $count_stmt = $pdo->prepare("
+            SELECT COUNT(DISTINCT position_id) FROM votes 
+            WHERE voter_id = ? AND election_type = ?
+        ");
         $count_stmt->execute([$current_user['id'], $election_type]);
         $voted_positions_count = $count_stmt->fetchColumn();
         
-        $total_stmt = $pdo->prepare("SELECT COUNT(*) FROM positions WHERE election_type = ? AND is_active = 1");
+        $total_stmt = $pdo->prepare("
+            SELECT COUNT(*) FROM positions 
+            WHERE election_type = ? AND is_active = 1
+        ");
         $total_stmt->execute([$election_type]);
         $total_positions = $total_stmt->fetchColumn();
         
         if ($voted_positions_count >= $total_positions) {
-            $update_stmt = $pdo->prepare("UPDATE users SET has_voted_" . $election_type . " = 1 WHERE id = ?");
+            $update_stmt = $pdo->prepare("
+                UPDATE users SET has_voted_" . $election_type . " = 1 
+                WHERE id = ?
+            ");
             $update_stmt->execute([$current_user['id']]);
         }
         
@@ -134,6 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['candidate_id'])) {
         
     } catch (Exception $e) {
         $pdo->rollBack();
+        error_log("Vote.php Submission Error: " . $e->getMessage());
         $error = $e->getMessage();
     }
 }
@@ -149,16 +169,25 @@ $positions_stmt->execute([$election_type]);
 $positions = $positions_stmt->fetchAll();
 
 // Get voted positions
-$voted_stmt = $pdo->prepare("SELECT DISTINCT position_id FROM votes WHERE voter_id = ? AND election_type = ?");
+$voted_stmt = $pdo->prepare("
+    SELECT DISTINCT position_id FROM votes 
+    WHERE voter_id = ? AND election_type = ?
+");
 $voted_stmt->execute([$current_user['id'], $election_type]);
 $voted_positions = $voted_stmt->fetchAll(PDO::FETCH_COLUMN);
 
 // Get voting statistics
-$total_voters_stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE is_verified = 1 AND role = 'voter'");
+$total_voters_stmt = $pdo->prepare("
+    SELECT COUNT(*) FROM users 
+    WHERE is_verified = 1 AND role = 'voter'
+");
 $total_voters_stmt->execute();
 $total_voters = $total_voters_stmt->fetchColumn();
 
-$voted_count_stmt = $pdo->prepare("SELECT COUNT(DISTINCT voter_id) FROM votes WHERE election_type = ?");
+$voted_count_stmt = $pdo->prepare("
+    SELECT COUNT(DISTINCT voter_id) FROM votes 
+    WHERE election_type = ?
+");
 $voted_count_stmt->execute([$election_type]);
 $voters_participated = $voted_count_stmt->fetchColumn();
 
@@ -741,7 +770,26 @@ function loadCandidates(positionId, isVoted) {
     fetch(`?ajax=get_candidates&position_id=${positionId}&election_type=<?php echo $election_type; ?>`)
         .then(response => response.json())
         .then(data => {
-            const candidates = data.candidates || data;
+            if (data.error) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-ballot-box">
+                            <svg width="150" height="150" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="40" y="60" width="120" height="100" rx="5" stroke="#ccc" stroke-width="4" fill="#f8f9fa"/>
+                                <rect x="60" y="40" width="80" height="30" rx="3" fill="#e9ecef" stroke="#ccc" stroke-width="2"/>
+                                <line x1="70" y1="90" x2="130" y2="90" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="70" y1="110" x2="110" y2="110" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="70" y1="130" x2="120" y2="130" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h4 class="empty-title">Error Loading Candidates</h4>
+                        <p class="empty-text">${data.message || 'Unable to load candidates. Please try again.'}</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const candidates = data.candidates || [];
             
             if (!Array.isArray(candidates) || candidates.length === 0) {
                 container.innerHTML = `
@@ -781,8 +829,8 @@ function loadCandidates(positionId, isVoted) {
                             <line x1="70" y1="130" x2="120" y2="130" stroke="#ddd" stroke-width="3" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h4 class="empty-title">No Candidates Available</h4>
-                    <p class="empty-text">There are currently no approved candidates for this position.</p>
+                    <h4 class="empty-title">Error Loading Candidates</h4>
+                    <p class="empty-text">Unable to load candidates. Please try again.</p>
                 </div>
             `;
         });
@@ -816,7 +864,7 @@ function createCandidateCard(candidate, positionId, isVoted) {
                 <div class="candidate-details">
                     <div><i class="bi bi-person-badge"></i> <strong>ID:</strong> ${candidate.university_id}</div>
                     <div><i class="bi bi-building"></i> <strong>Department:</strong> ${candidate.department}</div>
-                    <div><i class="bi bi-house"></i> <strong>Hall:</strong> ${candidate.candidate_hall}</div>
+                    <div><i class="bi bi-house"></i> <strong>Hall:</strong> ${candidate.candidate_hall || 'N/A'}</div>
                 </div>
                 ${candidate.manifesto ? `<div class="manifesto-preview"><small>${candidate.manifesto.substring(0, 150)}...</small></div>` : ''}
             </div>
