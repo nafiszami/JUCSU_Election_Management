@@ -214,7 +214,7 @@ include 'includes/header.php';
         <div class="hero-section text-white position-relative">
             <div class="card-body text-center py-5 position-relative" style="z-index: 1;">
                 <div class="logo-box pulse-animation">
-                    <i class="bi bi-trophy-fill"></i>
+                    <i class="bi bi-trophy-fill" ></i>
                 </div>
                 <h1 class="display-3 fw-bold mb-3">JUCSU Election</h1>
                 <p class="lead fs-4 mb-4">Jahangirnagar University Central Student's Union</p>

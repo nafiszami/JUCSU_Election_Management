@@ -5,8 +5,6 @@ if (!isset($pdo)) {
     return;
 }
 
-
-
 // CSRF token is assumed to be handled in the main dashboard or this file is standalone. 
 // We will keep the CSRF logic here for security.
 if (empty($_SESSION['csrf_token'])) {
@@ -21,11 +19,7 @@ if (isset($_SESSION['flash_message'])) {
     unset($_SESSION['flash_message']);
 }
 
-// Authentication check should be in dashboard.php, but if this is a standalone
-// file, it's correct. We'll assume it's included and remove the redirect to dashboard.php.
-// if (!isset($_SESSION['commission_authenticated'])) { /* ... */ }
-
-// Cancel Nomination logic 
+// Cancel Nomination logic for JUCSU candidates only
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'reject') {
     if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
         // Prevent script execution on CSRF failure
@@ -34,6 +28,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     
     $id = intval($_POST['candidate_id']);
     $reason = trim($_POST['rejection_reason']);
+    
+    // Verify it's a JUCSU candidate before processing
+    $verify_stmt = $pdo->prepare("SELECT id FROM candidates c JOIN positions p ON c.position_id = p.id WHERE c.id = ? AND p.election_type = 'jucsu'");
+    $verify_stmt->execute([$id]);
+    if (!$verify_stmt->fetch()) {
+        $_SESSION['flash_message'] = "Invalid candidate selection.";
+        header("Location: dashboard.php?page=cancel_nomination");
+        exit;
+    }
     
     if ($reason && $id > 0) {
         // Use prepared statement to update status and reason
@@ -46,31 +49,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         // Redirect back to the same page to show updated list and clear POST data
         header("Location: dashboard.php?page=cancel_nomination");
         exit;
+    } else {
+        $_SESSION['flash_message'] = "Rejection reason is required.";
+        header("Location: dashboard.php?page=cancel_nomination");
+        exit;
     }
 }
 
-
-$approved_stmt = $pdo->query(
+// Fetch approved JUCSU candidates only
+$approved_stmt = $pdo->prepare(
     "SELECT 
         c.id, u.full_name, u.enrollment_year, u.department, u.hall_name, p.position_name
      FROM candidates c
      JOIN users u ON c.user_id = u.id
      JOIN positions p ON c.position_id = p.id
-     WHERE c.status = 'approved'"
+     WHERE c.status = 'approved' AND p.election_type = 'jucsu'
+     ORDER BY p.position_order, u.full_name"
 );
+$approved_stmt->execute();
 $approved_candidates = $approved_stmt->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <div class="container-fluid">
 <div class="mx-auto" style="max-width: 800px;">
     <h3 class="mb-4 bg-warning text-white text-center p-3">
-        ❌ Cancel Nomination
+        ❌ Cancel JUCSU Nomination
     </h3>
 </div>
-
-
-
 
     <?php if ($message): ?>
         <div class="alert alert-info"><?= htmlspecialchars($message) ?></div>
@@ -78,7 +83,7 @@ $approved_candidates = $approved_stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <?php if (empty($approved_candidates)): ?>
         <div class="alert alert-success mt-4">
-            No candidates are currently marked as 'approved'.
+            No JUCSU candidates are currently marked as 'approved'.
         </div>
     <?php else: ?>
         <div class="table-responsive">
