@@ -316,7 +316,7 @@ include 'includes/header.php';
 </a>
 </div>
     <div class="col-md-3 col-6 mb-4">
-        <a href="candidates.php" class="quick-link-card">
+        <a href="view_candidates.php" class="quick-link-card">
             <div class="card-body text-center py-4">
                 <div class="icon-circle mx-auto" style="background: #fff3e0;">
                     <i class="bi bi-people text-warning"></i>

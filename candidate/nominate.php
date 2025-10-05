@@ -32,7 +32,8 @@ $positions = $pdo->prepare("SELECT id, position_name FROM positions WHERE electi
 $positions->execute([$election_type]);
 $positions = $positions->fetchAll();
 
-$hall_name = $election_type === 'hall' ? $current_user['hall_name'] : null;
+// Hall name should always be from the user's profile
+$hall_name = $current_user['hall_name'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
@@ -88,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } elseif ($file_size > $max_size) {
                     $error = "Photo size exceeds 2MB.";
                 } else {
-                    $target_dir = "../Uploads/candidate_photos/";
+                    $target_dir = "../uploads/candidate_photos/";
                     if (!is_dir($target_dir)) {
                         mkdir($target_dir, 0755, true);
                     }
@@ -170,12 +171,11 @@ include '../includes/header.php';
                         </select>
                     </div>
 
-                    <?php if ($election_type === 'hall'): ?>
-                        <div class="mb-4">
-                            <label for="hall_name" class="form-label fw-bold"><i class="bi bi-building me-2"></i>Hall</label>
-                            <input type="text" class="form-control" id="hall_name" name="hall_name" value="<?php echo htmlspecialchars($hall_name); ?>" readonly>
-                        </div>
-                    <?php endif; ?>
+                    <div class="mb-4">
+                        <label for="hall_name" class="form-label fw-bold"><i class="bi bi-building me-2"></i>Residential Hall</label>
+                        <input type="text" class="form-control" id="hall_name" name="hall_name" value="<?php echo htmlspecialchars($current_user['hall_name']); ?>" readonly>
+                        <div class="form-text">Your residential hall (cannot be changed)</div>
+                    </div>
 
                     <div class="mb-4">
                         <label for="manifesto" class="form-label fw-bold"><i class="bi bi-file-text me-2"></i>Manifesto</label>
