@@ -35,7 +35,7 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
         <div class="container">
             
             <a class="navbar-brand" href="/JUCSU_Election_Management/">
-                <img src="assets/picture/ju_logo.png" 
+                <img src="/JUCSU_Election_Management/assets/picture/ju_logo.png" 
                      alt="JUCSU Election Logo" 
                      class="logo-img">
                 <span class="logo-text d-none d-sm-inline">JUCSU Election</span> 
