@@ -43,6 +43,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
         $stmt = $pdo->prepare("UPDATE candidates SET status='rejected', rejection_reason=? WHERE id=?");
         $stmt->execute([$reason, $id]);
         
+        // Notify candidate
+        $stmt = $pdo->prepare("SELECT user_id FROM candidates WHERE id = ?");
+        $stmt->execute([$id]);
+        $user_id = $stmt->fetchColumn();
+        $stmt = $pdo->prepare("INSERT INTO notifications (user_id, title, message, type) VALUES (?, ?, ?, ?)");
+        $stmt->execute([
+            $user_id,
+            'Nomination Cancelled',
+            'Your nomination for JUCSU election has been cancelled. Reason: ' . $reason,
+            'error'
+        ]);
+        
         // Use a session flash message for the main dashboard to display after redirect
         $_SESSION['flash_message'] = "Nomination for ID {$id} canceled successfully.";
         
