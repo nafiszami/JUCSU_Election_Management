@@ -1,7 +1,6 @@
 <?php
 // Ensure $pdo is available from the included dashboard.php
 if (!isset($pdo)) {
-    // This check should ideally be redundant if dashboard.php is correct
     echo '<div class="alert alert-danger">FATAL ERROR: Database connection missing. Cannot proceed.</div>';
     return;
 }
@@ -24,9 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'withdrawal_deadline' => $_POST['withdrawal_deadline'] ?? null,
         'voting_date'         => $_POST['voting_date'] ?? null,
         'result_declaration'  => !empty($_POST['result_declaration']) ? $_POST['result_declaration'] : null,
+        'current_phase'       => $_POST['current_phase'] ?? 'nomination',
     ];
 
-    // Server-Side Validation
+    // Server-Side Validation for Dates
     $errors = [];
     $nomStart = strtotime($data['nomination_start']);
     $nomEnd = strtotime($data['nomination_end']);
@@ -45,41 +45,63 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($voting <= $withdraw) {
         $errors[] = "Voting Date must be *after* Withdrawal Deadline.";
     }
+    
+    // Validation: Phase must be a valid ENUM value (extra safety)
+    $valid_phases = ['nomination', 'scrutiny', 'campaign', 'voting', 'counting', 'completed'];
+    if (!in_array($data['current_phase'], $valid_phases)) {
+        $errors[] = "Invalid phase selected.";
+    }
 
     if (empty($errors)) {
         // Proceed with Database Operation
         try {
             $pdo->beginTransaction();
 
-            // Deactivate the currently active schedule before inserting the new one
-            $deactivate_stmt = $pdo->prepare("UPDATE election_schedule SET is_active = FALSE WHERE election_type = 'jucsu' AND is_active = TRUE");
+            // Deactivate the currently active schedules for BOTH types
+            $deactivate_stmt = $pdo->prepare("UPDATE election_schedule SET is_active = FALSE WHERE election_type IN ('jucsu', 'hall') AND is_active = TRUE");
             $deactivate_stmt->execute();
             
-            // Always INSERT a new record to create a historical log and the new active schedule
-            $sql = "INSERT INTO election_schedule (
-                        election_type, academic_year, nomination_start, nomination_end, 
-                        withdrawal_deadline, voting_date, result_declaration, is_active
-                    ) VALUES (
-                        'jucsu', :academic_year, :nom_start, :nom_end, 
-                        :withdrawal, :voting, :result, TRUE
-                    )";
-
-            $stmt = $pdo->prepare($sql);
-            
             // Determine academic year (using current year and next year)
-            $current_academic_year = date('Y') . '-' . (date('y') + 1); 
+            $current_academic_year = date('Y') . '-' . (date('Y') + 1); 
 
-            $stmt->execute([
-                ':academic_year' => $current_academic_year,
-                ':nom_start'     => $data['nomination_start'],
-                ':nom_end'       => $data['nomination_end'],
-                ':withdrawal'    => $data['withdrawal_deadline'],
-                ':voting'        => $data['voting_date'],
-                ':result'        => $data['result_declaration'],
-            ]);
+            // INSERT identical records for BOTH election types
+            $types = ['jucsu', 'hall'];
+            foreach ($types as $election_type) {
+                $sql = "INSERT INTO election_schedule (
+                            election_type, academic_year, nomination_start, nomination_end, 
+                            withdrawal_deadline, voting_date, result_declaration, current_phase, is_active
+                        ) VALUES (
+                            ?, ?, ?, ?, ?, ?, ?, ?, TRUE
+                        )";
+
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([
+                    $election_type,
+                    $current_academic_year,
+                    $data['nomination_start'],
+                    $data['nomination_end'],
+                    $data['withdrawal_deadline'],
+                    $data['voting_date'],
+                    $data['result_declaration'],
+                    $data['current_phase'],
+                ]);
+
+                $new_id = $pdo->lastInsertId();
+                
+                // Log the change to audit_logs for traceability (per type)
+                $log_stmt = $pdo->prepare("
+                    INSERT INTO audit_logs (user_id, action, table_name, record_id, new_values)
+                    VALUES (?, 'SCHEDULE_UPDATE', 'election_schedule', ?, ?)
+                ");
+                $log_stmt->execute([
+                    $_SESSION['user_id'] ?? null,  // Assuming user_id in session
+                    $new_id,
+                    json_encode(array_merge($data, ['election_type' => $election_type]))  // Log the new values + type
+                ]);
+            }
 
             $pdo->commit();
-            $success_message = "Election schedule successfully " . ($action === 'update' ? "updated" : "set") . "!";
+            $success_message = "Unified election schedule successfully " . ($action === 'update' ? "updated" : "set") . " for both JUCSU and Hall! Phase set to '" . ucfirst($data['current_phase']) . "'.";
             
             // Set flag to force a re-fetch of the new data immediately
             $refetch_needed = true;
@@ -99,11 +121,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // =======================================================
 // 2. FETCH LATEST ACTIVE SCHEDULE (Executed on GET or after successful POST)
 // =======================================================
+// Fetch from JUCSU (since identical to Hall)
 try {
-    // SQL to fetch the latest active JUCUSU election schedule.
     $stmt = $pdo->prepare("
         SELECT 
-            nomination_start, nomination_end, withdrawal_deadline, voting_date, result_declaration, updated_at
+            nomination_start, nomination_end, withdrawal_deadline, voting_date, result_declaration, 
+            current_phase, updated_at
         FROM 
             election_schedule 
         WHERE 
@@ -124,7 +147,7 @@ $is_schedule_set = (bool)$current_schedule;
 ?>
 
 <div class="container-fluid">
-    <h3 class="mb-4 text-success">📅 JUCU Election Schedule Management</h3>
+    <h3 class="mb-4 text-success">📅 Unified Election Schedule Management (JUCSU & Hall)</h3>
     
     <?php if ($success_message): ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -140,13 +163,13 @@ $is_schedule_set = (bool)$current_schedule;
         </div>
     <?php endif; ?>
 
-    <h3 class="mb-3 text-secondary">🗓️ Current Election Timeline</h3>
+    <h3 class="mb-3 text-secondary">🗓️ Current Unified Election Timeline</h3>
 
     <?php if ($is_schedule_set): ?>
         <div class="alert alert-success d-flex justify-content-between align-items-center">
             <strong>Active Schedule (Last updated: <?= date('Y-m-d H:i', strtotime($current_schedule['updated_at'])) ?>)</strong>
             <button class="btn btn-sm btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#editScheduleForm" aria-expanded="false" aria-controls="editScheduleForm">
-                <i class="bi bi-pencil-square"></i> Edit Schedule
+                <i class="bi bi-pencil-square"></i> Edit Schedule & Phase
             </button>
         </div>
         
@@ -181,20 +204,28 @@ $is_schedule_set = (bool)$current_schedule;
                 </div>
             </div>
             
+            <div class="col-md-12">
+                <div class="p-3 shadow rounded border-start border-5 border-info bg-light">
+                    <h5 class="text-info">Current Phase (Both Elections)</h5>
+                    <p class="mb-0"><strong><?= ucfirst(htmlspecialchars($current_schedule['current_phase'])) ?></strong></p>
+                </div>
+            </div>
+            
         </div>
         
     <?php else: ?>
         <div class="alert alert-warning text-center d-flex justify-content-between align-items-center mb-5">
-            <strong>The election schedule has not been set yet.</strong>
+            <strong>The unified election schedule has not been set yet.</strong>
             <button class="btn btn-sm btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#editScheduleForm" aria-expanded="true" aria-controls="editScheduleForm">
-                <i class="bi bi-calendar-plus"></i> Set Schedule Now
+                <i class="bi bi-calendar-plus"></i> Set Unified Schedule Now
             </button>
         </div>
     <?php endif; ?>
 
     <div class="card shadow border-info collapse <?= !$is_schedule_set ? 'show' : '' ?>" id="editScheduleForm">
         <div class="card-header bg-info text-white">
-            <h5 class="mb-0"><?= $is_schedule_set ? 'Edit Schedule' : 'Set New Election Dates' ?></h5>
+            <h5 class="mb-0"><?= $is_schedule_set ? 'Edit Unified Schedule & Phase' : 'Set New Unified Election Dates & Phase' ?></h5>
+            <p class="mb-0 small opacity-75">This schedule applies to both JUCSU and Hall elections.</p>
         </div>
         <div class="card-body">
             <form id="schedule-form" method="POST" action="dashboard.php?page=schedule">
@@ -230,18 +261,31 @@ $is_schedule_set = (bool)$current_schedule;
                         <div class="invalid-feedback" id="voting-date-error">Voting Date must be after Withdrawal Deadline.</div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-md-6">
                         <label for="result_declaration" class="form-label">Result Declaration Date (Optional)</label>
                         <input type="date" class="form-control" id="result_declaration" name="result_declaration"
                                value="<?= htmlspecialchars($current_schedule['result_declaration'] ?? '') ?>">
                         <div class="form-text">Leave blank to declare results later.</div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="current_phase" class="form-label">Current Phase (Both Elections)</label>
+                        <select class="form-select" id="current_phase" name="current_phase" required>
+                            <option value="nomination" <?= ($current_schedule['current_phase'] ?? '') === 'nomination' ? 'selected' : '' ?>>Nomination</option>
+                            <option value="scrutiny" <?= ($current_schedule['current_phase'] ?? '') === 'scrutiny' ? 'selected' : '' ?>>Scrutiny</option>
+                            <option value="campaign" <?= ($current_schedule['current_phase'] ?? '') === 'campaign' ? 'selected' : '' ?>>Campaign</option>
+                            <option value="voting" <?= ($current_schedule['current_phase'] ?? '') === 'voting' ? 'selected' : '' ?>>Voting</option>
+                            <option value="counting" <?= ($current_schedule['current_phase'] ?? '') === 'counting' ? 'selected' : '' ?>>Counting</option>
+                            <option value="completed" <?= ($current_schedule['current_phase'] ?? '') === 'completed' ? 'selected' : '' ?>>Completed</option>
+                        </select>
+                        <div class="form-text">Manually set the current election phase to control available actions for both elections.</div>
                     </div>
 
                 </div>
 
                 <div class="d-grid mt-4">
                     <button type="submit" class="btn btn-primary btn-lg">
-                        <i class="bi bi-calendar-check"></i> <?= $is_schedule_set ? 'Save Changes' : 'Set Schedule' ?>
+                        <i class="bi bi-calendar-check"></i> <?= $is_schedule_set ? 'Save Unified Changes' : 'Set Unified Schedule' ?>
                     </button>
                 </div>
             </form>
