@@ -27,7 +27,12 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
         .navbar-brand .logo-text {
             font-weight: bold;
             color: white; /* Or your brand color */
+            
         }
+        .navbar .navbar-brand {
+    margin-left: -30px; /* move left by 10px */
+}
+
     </style>
 </head>
 <body>
