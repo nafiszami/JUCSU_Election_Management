@@ -27,7 +27,12 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
         .navbar-brand .logo-text {
             font-weight: bold;
             color: white; /* Or your brand color */
+            
         }
+        .navbar .navbar-brand {
+    margin-left: -30px; /* move left by 10px */
+}
+
     </style>
 </head>
 <body>
@@ -35,7 +40,7 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
         <div class="container">
             
             <a class="navbar-brand" href="/JUCSU_Election_Management/">
-                <img src="assets/picture/ju_logo.png" 
+                <img src="/JUCSU_Election_Management/assets/picture/ju_logo.png" 
                      alt="JUCSU Election Logo" 
                      class="logo-img">
                 <span class="logo-text d-none d-sm-inline">JUCSU Election</span> 

@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     }
     $id = intval($_POST['candidate_id']);
     
-    // Verify it's a JUCSU candidate before processing
-    $verify_stmt = $pdo->prepare("SELECT id FROM candidates c JOIN positions p ON c.position_id = p.id WHERE c.id = ? AND p.election_type = 'jucsu'");
+    // Verify it's a JUCSU candidate before processing (Fixed: Specify c.id to avoid ambiguity)
+    $verify_stmt = $pdo->prepare("SELECT c.id FROM candidates c JOIN positions p ON c.position_id = p.id WHERE c.id = ? AND p.election_type = 'jucsu'");
     $verify_stmt->execute([$id]);
     if (!$verify_stmt->fetch()) {
         $_SESSION['flash_message'] = "Invalid candidate selection.";

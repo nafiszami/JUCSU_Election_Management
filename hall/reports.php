@@ -75,7 +75,7 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
         ]);
     }
 
-    // Voting Statistics (improved with more metrics)
+    // Voting Statistics
     fputcsv($output, []);
     fputcsv($output, ['Voting Statistics']);
     fputcsv($output, ['Metric', 'Value']);
@@ -175,7 +175,7 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
     ";
     $params = [];
     list($query, $params) = addHallFilter($query, $params, $hall_name, 'u.hall_name', false);
-    $query .= " ORDER BY a.created_at DESC LIMIT 100";  // Increased limit for CSV
+    $query .= " ORDER BY a.created_at DESC LIMIT 100";
     $stmt = $pdo->prepare($query);
     $stmt->execute($params);
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -189,7 +189,7 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
     exit;
 }
 
-// Fetch data with filters (refactored)
+// Fetch data with filters
 
 // Candidate report
 $query = "
@@ -226,7 +226,7 @@ $total_voters_voted = $stmt->fetch(PDO::FETCH_ASSOC)['total_voters_voted'];
 
 $turnout_percentage = $total_voters > 0 ? ($total_voters_voted / $total_voters) * 100 : 0;
 
-// New: Votes per position (fixed: use CASE for hall filter to include positions with 0 votes)
+// Votes per position
 $query = "
     SELECT p.position_name, p.election_type, 
            SUM(CASE WHEN v.voter_hall = ? OR ? IS NULL THEN 1 ELSE 0 END) as total_votes
@@ -241,7 +241,7 @@ $stmt = $pdo->prepare($query);
 $stmt->execute($params);
 $votes_per_position = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Voters list (with pagination - fixed: append LIMIT/OFFSET directly to avoid PDO quoting issue)
+// Voters list (with pagination)
 $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
 $per_page = 50;
 $offset = ($page - 1) * $per_page;
@@ -293,7 +293,7 @@ $stmt = $pdo->prepare($query);
 $stmt->execute($params);
 $rejected_voters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Audit logs (increased limit)
+// Audit logs
 $query = "
     SELECT a.created_at, u.university_id, a.action, a.table_name, a.record_id, a.new_values
     FROM audit_logs a
@@ -526,6 +526,12 @@ include '../includes/header.php';
                 <a class="nav-link" href="?export=csv<?php echo $election_type_filter ? '&election_type=' . $election_type_filter : ''; ?>">
                     <i class="bi bi-download"></i>
                     Export CSV
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../hall/dashboard.php">
+                    <i class="bi bi-house-door"></i>
+                    Back to Dashboard
                 </a>
             </li>
             <li class="nav-item">
@@ -922,7 +928,7 @@ $(document).ready(function() {
             "search": "Search Audit Logs:",
             "lengthMenu": "Show _MENU_ entries per page"
         },
-        "order": [[0, "desc"]]  // Default sort by timestamp descending
+        "order": [[0, "desc"]]
     });
 
     // Voter Turnout Chart
@@ -960,7 +966,7 @@ $(document).ready(function() {
         }
     });
 
-    // Active sidebar link based on current scroll position
+    // Active sidebar link based on scroll position
     let sections = document.querySelectorAll('section[id]');
     let sidebarLinks = document.querySelectorAll('.sidebar .nav-link[href^="#"]');
     window.addEventListener('scroll', () => {

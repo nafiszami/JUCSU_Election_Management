@@ -7,7 +7,7 @@ $current_user = getCurrentUser();
 
 // Page Parameter Handling & Secure File Mapping
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-$allowed_pages = ['home', 'schedule', 'approve_candidate', 'cancel_nomination', 'result', 'complaints', 'audit'];
+$allowed_pages = ['home', 'schedule', 'approve_candidate', 'cancel_nomination', 'result', 'complaints', 'audit', 'monitor'];
 
 if (!in_array($page, $allowed_pages)) {
     $page = 'home';
@@ -20,6 +20,7 @@ $file_map = [
     'complaints'        => 'complaints.php',
     'cancel_nomination' => 'cancel_nomination.php',
     'audit'             => 'audit.php',
+    'monitor'           => 'monitor.php',
     'home'              => null
 ];
 
@@ -132,6 +133,9 @@ $file_to_include = $file_map[$page] ?? null;
         </a>
         <a href="dashboard.php?page=cancel_nomination" <?= $page === 'cancel_nomination' ? 'aria-current="page"' : '' ?>>
             ❌ Cancel Nomination
+        </a>
+        <a href="dashboard.php?page=monitor" <?= $page === 'monitor' ? 'aria-current="page"' : '' ?>>
+            🔍 Monitor
         </a>
         <a href="dashboard.php?page=result" <?= $page === 'result' ? 'aria-current="page"' : '' ?>>
             📊 Live Result
