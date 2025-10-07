@@ -100,7 +100,7 @@ $pending_candidates = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container mt-4">
-    <h2 class="text-info">Approve Candidates</h2>
+    <h2 class="text-info">Approve JUCSU Candidates</h2>
 
     <?php if ($message): ?>
         <div class="alert alert-success alert-dismissible">
