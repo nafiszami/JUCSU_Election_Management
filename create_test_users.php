@@ -1,4 +1,3 @@
-```php
 <?php
 // admin/create_users_dashboard.php
 // SECURITY WARNING: Delete this file after creating test users!
@@ -35,12 +34,97 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([$university_id, $email, $password, $full_name, $role, 
                           $department, $hall_name, $enrollment_year, $gender, $is_verified]);
             
+            $new_user_id = $pdo->lastInsertId();
+            
+            // If hall commissioner, update halls table
+            if ($role === 'hall_commissioner') {
+                $update_stmt = $pdo->prepare("
+                    UPDATE halls SET commissioner_id = ? WHERE hall_name = ?
+                ");
+                $update_stmt->execute([$new_user_id, $hall_name]);
+            }
+            
             $success = "User created successfully: $university_id";
             $created_users[] = [
                 'id' => $university_id,
                 'name' => $full_name,
                 'password' => $_POST['password'],
                 'role' => $role
+            ];
+        } catch (PDOException $e) {
+            $error = "Error: " . $e->getMessage();
+        }
+    } elseif ($action === 'create_single_central') {
+        // Create single central commissioner
+        $university_id = $_POST['university_id'];
+        $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $full_name = $_POST['full_name'];
+        $department = $_POST['department'];
+        $hall_name = $_POST['hall_name'];
+        $enrollment_year = $_POST['enrollment_year'];
+        $gender = $_POST['gender'];
+        $is_verified = isset($_POST['is_verified']) ? 1 : 0;
+        $role = 'central_commissioner';
+        
+        try {
+            $stmt = $pdo->prepare("
+                INSERT INTO users (university_id, email, password, full_name, role, department, 
+                                 hall_name, enrollment_year, gender, is_verified, is_active)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
+            ");
+            
+            $stmt->execute([$university_id, $email, $password, $full_name, $role, 
+                          $department, $hall_name, $enrollment_year, $gender, $is_verified]);
+            
+            $success = "Central Commissioner created successfully: $university_id";
+            $created_users[] = [
+                'id' => $university_id,
+                'name' => $full_name,
+                'password' => $_POST['password'],
+                'role' => $role
+            ];
+        } catch (PDOException $e) {
+            $error = "Error: " . $e->getMessage();
+        }
+    } elseif ($action === 'create_single_hall') {
+        // Create single hall commissioner
+        $university_id = $_POST['university_id'];
+        $email = $_POST['email'];
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $full_name = $_POST['full_name'];
+        $department = $_POST['department'];
+        $hall_name = $_POST['hall_name'];
+        $enrollment_year = $_POST['enrollment_year'];
+        $gender = $_POST['gender'];
+        $is_verified = isset($_POST['is_verified']) ? 1 : 0;
+        $role = 'hall_commissioner';
+        
+        try {
+            $stmt = $pdo->prepare("
+                INSERT INTO users (university_id, email, password, full_name, role, department, 
+                                 hall_name, enrollment_year, gender, is_verified, is_active)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
+            ");
+            
+            $stmt->execute([$university_id, $email, $password, $full_name, $role, 
+                          $department, $hall_name, $enrollment_year, $gender, $is_verified]);
+            
+            $new_user_id = $pdo->lastInsertId();
+            
+            // Update halls table
+            $update_stmt = $pdo->prepare("
+                UPDATE halls SET commissioner_id = ? WHERE hall_name = ?
+            ");
+            $update_stmt->execute([$new_user_id, $hall_name]);
+            
+            $success = "Hall Commissioner created successfully: $university_id for $hall_name";
+            $created_users[] = [
+                'id' => $university_id,
+                'name' => $full_name,
+                'password' => $_POST['password'],
+                'role' => $role,
+                'hall' => $hall_name
             ];
         } catch (PDOException $e) {
             $error = "Error: " . $e->getMessage();
@@ -127,6 +211,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $gender = $hall['hall_type'] === 'female' ? 'female' : 'male';
                 $stmt->execute([$hall_id, $email, $password, $name, $hall['hall_name'], $gender]);
+                
+                $new_user_id = $pdo->lastInsertId();
+                if ($new_user_id) {
+                    // Update halls table
+                    $update_stmt = $pdo->prepare("
+                        UPDATE halls SET commissioner_id = ? WHERE hall_name = ?
+                    ");
+                    $update_stmt->execute([$new_user_id, $hall['hall_name']]);
+                }
                 
                 $created_users[] = [
                     'id' => $hall_id,
@@ -337,12 +430,191 @@ $stats = $stats_stmt->fetchAll(PDO::FETCH_KEY_PAIR);
             </div>
         </div>
 
-        <!-- Create Single User -->
-        <div class="row">
+        <!-- Create Single Central Commissioner -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="bi bi-person-plus"></i> Create Single Central Commissioner</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <input type="hidden" name="action" value="create_single_central">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">University ID</label>
+                                    <input type="text" class="form-control" name="university_id" 
+                                           placeholder="e.g., CENTRAL001" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" 
+                                           placeholder="central@ju.ac.bd" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="full_name" 
+                                           placeholder="Dr. Central Commissioner" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="password" 
+                                           value="password123" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Department</label>
+                                    <select class="form-select" name="department" required>
+                                        <?php foreach ($departments as $dept): ?>
+                                            <option value="<?php echo $dept['department_name']; ?>">
+                                                <?php echo $dept['department_name']; ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Hall (Optional)</label>
+                                    <select class="form-select" name="hall_name">
+                                        <option value="">None</option>
+                                        <?php foreach ($halls as $hall): ?>
+                                            <option value="<?php echo $hall['hall_name']; ?>">
+                                                <?php echo $hall['hall_name']; ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Enrollment Year</label>
+                                    <select class="form-select" name="enrollment_year" required>
+                                        <?php for ($year = 2024; $year >= 2018; $year--): ?>
+                                            <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                        <?php endfor; ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-select" name="gender" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="is_verified" 
+                                           id="is_verified_central" checked>
+                                    <label class="form-check-label" for="is_verified_central">Verified</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info w-100">
+                                <i class="bi bi-person-plus"></i> Create Central Commissioner
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create Single Hall Commissioner -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0"><i class="bi bi-person-plus"></i> Create Single Hall Commissioner</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST">
+                            <input type="hidden" name="action" value="create_single_hall">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">University ID</label>
+                                    <input type="text" class="form-control" name="university_id" 
+                                           placeholder="e.g., HALL001" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" 
+                                           placeholder="hall@ju.ac.bd" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="full_name" 
+                                           placeholder="Prof. Hall Commissioner" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="password" 
+                                           value="password123" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Department</label>
+                                    <select class="form-select" name="department" required>
+                                        <?php foreach ($departments as $dept): ?>
+                                            <option value="<?php echo $dept['department_name']; ?>">
+                                                <?php echo $dept['department_name']; ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Hall</label>
+                                    <select class="form-select" name="hall_name" required>
+                                        <?php foreach ($halls as $hall): ?>
+                                            <option value="<?php echo $hall['hall_name']; ?>">
+                                                <?php echo $hall['hall_name']; ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Enrollment Year</label>
+                                    <select class="form-select" name="enrollment_year" required>
+                                        <?php for ($year = 2024; $year >= 2018; $year--): ?>
+                                            <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                        <?php endfor; ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-select" name="gender" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="is_verified" 
+                                           id="is_verified_hall" checked>
+                                    <label class="form-check-label" for="is_verified_hall">Verified</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-secondary w-100">
+                                <i class="bi bi-person-plus"></i> Create Hall Commissioner
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Single User (General, including Voters) -->
+        <div class="row mt-4">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header bg-warning">
-                        <h5 class="mb-0"><i class="bi bi-person-plus"></i> Create Single User</h5>
+                        <h5 class="mb-0"><i class="bi bi-person-plus"></i> Create Single User (Voter or Other)</h5>
                     </div>
                     <div class="card-body">
                         <form method="POST">
