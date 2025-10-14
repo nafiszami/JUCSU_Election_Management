@@ -43,7 +43,8 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
                 <img src="/JUCSU_Election_Management/assets/picture/ju_logo.png" 
                      alt="JUCSU Election Logo" 
                      class="logo-img">
-                <span class="logo-text d-none d-sm-inline">Jahangirnagar University</span> 
+                <span class="logo-text d-none d-sm-inline">JUCSU Election</span> <br> 
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,7 +53,7 @@ $current_user = isLoggedIn() ? getCurrentUser() : null;
                 <ul class="navbar-nav ms-auto">
                     <?php if (isLoggedIn()): ?>
                         <?php if (hasRole(['hall_commissioner'])): ?>
-                            <li class="nav-item"
+                            <li class="nav-item" >
                                 <a class="nav-link" href="/JUCSU_Election_Management/hall/verify_voters.php">Verify Voters</a>
                             </li>
                             <li class="nav-item">
