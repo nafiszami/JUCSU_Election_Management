@@ -388,7 +388,7 @@ include 'includes/header.php';
             <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
-        <p class="text-muted small">© 2006 Jahangirnagar University | All Rights Reserved</p>
+        <p class="text-muted small">© 2025 Jahangirnagar University | All Rights Reserved</p>
     </div>
 </div>
 

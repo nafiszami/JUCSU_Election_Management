@@ -1,4 +1,5 @@
 <?php
+// central/schedule.php
 // Ensure $pdo is available from the included dashboard.php
 if (!isset($pdo)) {
     echo '<div class="alert alert-danger">FATAL ERROR: Database connection missing. Cannot proceed.</div>';
@@ -15,7 +16,6 @@ $is_schedule_set = false;
 // 1. HANDLE FORM SUBMISSION (If this script was POSTed to itself)
 // =======================================================
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
     $action = $_POST['action'] ?? 'insert';
     $data = [
         'nomination_start'    => $_POST['nomination_start'] ?? null,
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Voting Date must be *after* Withdrawal Deadline.";
     }
     
-    // Validation: Phase must be a valid ENUM value (extra safety)
+    // Validation: Phase must be a valid ENUM value
     $valid_phases = ['nomination', 'scrutiny', 'campaign', 'voting', 'counting', 'completed'];
     if (!in_array($data['current_phase'], $valid_phases)) {
         $errors[] = "Invalid phase selected.";
@@ -57,58 +57,101 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $pdo->beginTransaction();
 
-            // Deactivate the currently active schedules for BOTH types
-            $deactivate_stmt = $pdo->prepare("UPDATE election_schedule SET is_active = FALSE WHERE election_type IN ('jucsu', 'hall') AND is_active = TRUE");
-            $deactivate_stmt->execute();
-            
-            // Determine academic year (using current year and next year)
-            $current_academic_year = date('Y') . '-' . (date('Y') + 1); 
+            // Check for existing active schedules
+            $check_stmt = $pdo->prepare("SELECT id, election_type FROM election_schedule WHERE is_active = TRUE AND election_type IN ('jucsu', 'hall')");
+            $check_stmt->execute();
+            $existing_schedules = $check_stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            // INSERT identical records for BOTH election types
-            $types = ['jucsu', 'hall'];
-            foreach ($types as $election_type) {
-                $sql = "INSERT INTO election_schedule (
+            // Determine academic year
+            $current_academic_year = date('Y') . '-' . (date('Y') + 1);
+
+            if (!empty($existing_schedules)) {
+                // Update existing active schedules
+                $sql = "
+                    UPDATE election_schedule
+                    SET nomination_start = ?,
+                        nomination_end = ?,
+                        withdrawal_deadline = ?,
+                        voting_date = ?,
+                        result_declaration = ?,
+                        current_phase = ?,
+                        academic_year = ?,
+                        updated_at = CURRENT_TIMESTAMP
+                    WHERE id = ? AND election_type = ?
+                ";
+                
+                foreach ($existing_schedules as $schedule) {
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute([
+                        $data['nomination_start'],
+                        $data['nomination_end'],
+                        $data['withdrawal_deadline'],
+                        $data['voting_date'],
+                        $data['result_declaration'],
+                        $data['current_phase'],
+                        $current_academic_year,
+                        $schedule['id'],
+                        $schedule['election_type']
+                    ]);
+
+                    // Log the update to audit_logs
+                    $log_stmt = $pdo->prepare("
+                        INSERT INTO audit_logs (user_id, action, table_name, record_id, new_values)
+                        VALUES (?, 'SCHEDULE_UPDATE', 'election_schedule', ?, ?)
+                    ");
+                    $log_stmt->execute([
+                        $_SESSION['user_id'] ?? null,
+                        $schedule['id'],
+                        json_encode(array_merge($data, ['election_type' => $schedule['election_type']]))
+                    ]);
+                }
+                $success_message = "Unified election schedule successfully updated for both JUCSU and Hall! Phase set to '" . ucfirst($data['current_phase']) . "'.";
+            } else {
+                // No active schedules, insert new ones
+                $types = ['jucsu', 'hall'];
+                foreach ($types as $election_type) {
+                    $sql = "
+                        INSERT INTO election_schedule (
                             election_type, academic_year, nomination_start, nomination_end, 
                             withdrawal_deadline, voting_date, result_declaration, current_phase, is_active
                         ) VALUES (
                             ?, ?, ?, ?, ?, ?, ?, ?, TRUE
                         )";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute([
+                        $election_type,
+                        $current_academic_year,
+                        $data['nomination_start'],
+                        $data['nomination_end'],
+                        $data['withdrawal_deadline'],
+                        $data['voting_date'],
+                        $data['result_declaration'],
+                        $data['current_phase']
+                    ]);
 
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute([
-                    $election_type,
-                    $current_academic_year,
-                    $data['nomination_start'],
-                    $data['nomination_end'],
-                    $data['withdrawal_deadline'],
-                    $data['voting_date'],
-                    $data['result_declaration'],
-                    $data['current_phase'],
-                ]);
-
-                $new_id = $pdo->lastInsertId();
-                
-                // Log the change to audit_logs for traceability (per type)
-                $log_stmt = $pdo->prepare("
-                    INSERT INTO audit_logs (user_id, action, table_name, record_id, new_values)
-                    VALUES (?, 'SCHEDULE_UPDATE', 'election_schedule', ?, ?)
-                ");
-                $log_stmt->execute([
-                    $_SESSION['user_id'] ?? null,  // Assuming user_id in session
-                    $new_id,
-                    json_encode(array_merge($data, ['election_type' => $election_type]))  // Log the new values + type
-                ]);
+                    $new_id = $pdo->lastInsertId();
+                    
+                    // Log the insert to audit_logs
+                    $log_stmt = $pdo->prepare("
+                        INSERT INTO audit_logs (user_id, action, table_name, record_id, new_values)
+                        VALUES (?, 'SCHEDULE_INSERT', 'election_schedule', ?, ?)
+                    ");
+                    $log_stmt->execute([
+                        $_SESSION['user_id'] ?? null,
+                        $new_id,
+                        json_encode(array_merge($data, ['election_type' => $election_type]))
+                    ]);
+                }
+                $success_message = "Unified election schedule successfully set for both JUCSU and Hall! Phase set to '" . ucfirst($data['current_phase']) . "'.";
             }
 
             $pdo->commit();
-            $success_message = "Unified election schedule successfully " . ($action === 'update' ? "updated" : "set") . " for both JUCSU and Hall! Phase set to '" . ucfirst($data['current_phase']) . "'.";
-            
-            // Set flag to force a re-fetch of the new data immediately
+            // Set flag to force a re-fetch of the updated data
             $refetch_needed = true;
 
         } catch (PDOException $e) {
             $pdo->rollBack();
-            error_log("Schedule DB Error: " . $e->getMessage());
+            error_log("Schedule DB Error: " . $e->getMessage(), 3, '../logs/debug.log');
             $error_message = "A database error occurred. The schedule was not saved.";
         }
     } else {
@@ -117,11 +160,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-
 // =======================================================
 // 2. FETCH LATEST ACTIVE SCHEDULE (Executed on GET or after successful POST)
 // =======================================================
-// Fetch from JUCSU (since identical to Hall)
 try {
     $stmt = $pdo->prepare("
         SELECT 
@@ -139,7 +180,7 @@ try {
     $current_schedule = $stmt->fetch(PDO::FETCH_ASSOC);
 
 } catch (PDOException $e) {
-    // Append database error if fetching failed
+    error_log("Fetch Schedule Error: " . $e->getMessage(), 3, '../logs/debug.log');
     $error_message .= (empty($error_message) ? "" : "<br>") . "Database error: Could not fetch schedule.";
 }
 
@@ -151,14 +192,14 @@ $is_schedule_set = (bool)$current_schedule;
     
     <?php if ($success_message): ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <?= $success_message ?>
+            <?= htmlspecialchars($success_message) ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endif; ?>
 
     <?php if ($error_message): ?>
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <?= $error_message ?>
+            <?= htmlspecialchars($error_message) ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     <?php endif; ?>
@@ -174,7 +215,6 @@ $is_schedule_set = (bool)$current_schedule;
         </div>
         
         <div class="row g-4 mb-5">
-            
             <div class="col-md-6">
                 <div class="p-3 shadow rounded border-start border-5 border-warning bg-light-orange-custom">
                     <h5 class="text-warning">Nomination Period</h5>
@@ -200,7 +240,7 @@ $is_schedule_set = (bool)$current_schedule;
             <div class="col-md-6">
                 <div class="p-3 shadow rounded border-start border-5 border-danger bg-light-red-custom">
                     <h5 class="text-danger">Result Declaration</h5>
-                    <p class="mb-0"><strong>Date:</strong> <?= htmlspecialchars($current_schedule['result_declaration']) ?: 'Not yet set' ?></p>
+                    <p class="mb-0"><strong>Date:</strong> <?= htmlspecialchars($current_schedule['result_declaration'] ?: 'Not yet set') ?></p>
                 </div>
             </div>
             
@@ -210,7 +250,6 @@ $is_schedule_set = (bool)$current_schedule;
                     <p class="mb-0"><strong><?= ucfirst(htmlspecialchars($current_schedule['current_phase'])) ?></strong></p>
                 </div>
             </div>
-            
         </div>
         
     <?php else: ?>
@@ -229,11 +268,9 @@ $is_schedule_set = (bool)$current_schedule;
         </div>
         <div class="card-body">
             <form id="schedule-form" method="POST" action="dashboard.php?page=schedule">
-                
                 <input type="hidden" name="action" value="<?= $is_schedule_set ? 'update' : 'insert' ?>">
                 
                 <div class="row g-3">
-                    
                     <div class="col-md-6">
                         <label for="nomination_start" class="form-label">Nomination Start Date</label>
                         <input type="date" class="form-control" id="nomination_start" name="nomination_start" 
@@ -280,7 +317,6 @@ $is_schedule_set = (bool)$current_schedule;
                         </select>
                         <div class="form-text">Manually set the current election phase to control available actions for both elections.</div>
                     </div>
-
                 </div>
 
                 <div class="d-grid mt-4">
@@ -294,7 +330,7 @@ $is_schedule_set = (bool)$current_schedule;
 </div>
 
 <style>
-    /* Custom CSS for the specific light background colors (Remains here) */
+    /* Custom CSS for the specific light background colors */
     .bg-light-orange-custom { background-color: #ffe5cc; }
     .bg-light-blue-custom   { background-color: #ccf3ff; }
     .bg-light-green-custom  { background-color: #ccffe5; }
@@ -302,50 +338,46 @@ $is_schedule_set = (bool)$current_schedule;
 </style>
 
 <script>
-    document.getElementById('schedule-form').addEventListener('submit', function(e) {
-        
-        let nomStart = document.getElementById('nomination_start').value;
-        let nomEnd = document.getElementById('nomination_end').value;
-        let withdraw = document.getElementById('withdrawal_deadline').value;
-        let voting = document.getElementById('voting_date').value;
+document.getElementById('schedule-form').addEventListener('submit', function(e) {
+    let nomStart = document.getElementById('nomination_start').value;
+    let nomEnd = document.getElementById('nomination_end').value;
+    let withdraw = document.getElementById('withdrawal_deadline').value;
+    let voting = document.getElementById('voting_date').value;
 
-        let isValid = true;
-        
-        // Helper function to validate dates
-        const validateDate = (elementId, compareValue, errorMessageId) => {
-            const element = document.getElementById(elementId);
-            const dateValue = element.value;
-            // Condition for failure: Date must be STRICTLY AFTER the compare value
-            const condition = new Date(dateValue) <= new Date(compareValue); 
+    let isValid = true;
+    
+    // Helper function to validate dates
+    const validateDate = (elementId, compareValue, errorMessageId) => {
+        const element = document.getElementById(elementId);
+        const dateValue = element.value;
+        // Condition for failure: Date must be STRICTLY AFTER the compare value
+        const condition = new Date(dateValue) <= new Date(compareValue); 
 
-            if (condition) {
-                element.classList.add('is-invalid');
-                element.classList.remove('is-valid');
-                isValid = false;
-            } else {
-                element.classList.remove('is-invalid');
-                if (dateValue) {
-                    element.classList.add('is-valid');
-                }
+        if (condition) {
+            element.classList.add('is-invalid');
+            element.classList.remove('is-valid');
+            isValid = false;
+        } else {
+            element.classList.remove('is-invalid');
+            if (dateValue) {
+                element.classList.add('is-valid');
             }
-        };
-
-        // 1. Nomination End > Nomination Start
-        validateDate('nomination_end', nomStart, 'nomination-end-error');
-
-        // 2. Withdrawal Deadline > Nomination End
-        validateDate('withdrawal_deadline', nomEnd, 'withdrawal-error');
-
-        // 3. Voting Date > Withdrawal Deadline
-        validateDate('voting_date', withdraw, 'voting-date-error');
-
-        if (!isValid) {
-            e.preventDefault(); // Stop form submission if validation fails
-            // Scroll to the first error to guide the user
-            document.querySelector('.is-invalid').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        
-        // Note: The form submission will trigger a full page reload,
-        // which runs the PHP logic at the top of this file.
-    });
+    };
+
+    // 1. Nomination End > Nomination Start
+    validateDate('nomination_end', nomStart, 'nomination-end-error');
+
+    // 2. Withdrawal Deadline > Nomination End
+    validateDate('withdrawal_deadline', nomEnd, 'withdrawal-error');
+
+    // 3. Voting Date > Withdrawal Deadline
+    validateDate('voting_date', withdraw, 'voting-date-error');
+
+    if (!isValid) {
+        e.preventDefault(); // Stop form submission if validation fails
+        // Scroll to the first error to guide the user
+        document.querySelector('.is-invalid').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+});
 </script>
