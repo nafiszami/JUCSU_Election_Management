@@ -15,7 +15,8 @@ try {
     $positions_stmt = $pdo->query("
         SELECT id, position_name, election_type, position_order
         FROM positions
-        ORDER BY election_type, position_order ASC
+        WHERE election_type = 'jucsu'
+        ORDER BY position_order ASC
     ");
     $positions = $positions_stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -32,7 +33,7 @@ try {
                 c.status
             FROM candidates c
             JOIN users u ON c.user_id = u.id
-            WHERE c.position_id = :position_id AND c.status = 'approved'
+            WHERE c.position_id = :position_id AND c.status = 'approved'  AND c.election_type = 'jucsu'
             ORDER BY c.vote_count DESC, u.full_name ASC
         ");
         $candidates_stmt->execute([':position_id' => $position_id]);
