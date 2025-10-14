@@ -327,13 +327,13 @@ include 'includes/header.php';
         </a>
     </div>
     <div class="col-md-3 col-6 mb-4">
-        <a href="results.php" class="quick-link-card">
+        <a href="public_results.php" class="quick-link-card">
             <div class="card-body text-center py-4">
                 <div class="icon-circle mx-auto" style="background: #e8f5e9;">
                     <i class="bi bi-trophy text-success"></i>
                 </div>
                 <h5 class="fw-bold">Election Results</h5>
-                <p class="text-muted small mb-0">View live results</p>
+                <p class="text-muted small mb-0">View results</p>
             </div>
         </a>
     </div>
