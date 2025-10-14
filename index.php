@@ -327,7 +327,7 @@ include 'includes/header.php';
                     <i class="bi bi-trophy text-success"></i>
                 </div>
                 <h5 class="fw-bold">Election Results</h5>
-                <p class="text-muted small mb-0">View results</p>
+                <p class="text-muted small mb-0">View live results</p>
             </div>
         </a>
     </div>
@@ -388,7 +388,7 @@ include 'includes/header.php';
             <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
         </div>
-        <p class="text-muted small">© 2006 Jahangirnagar University | All Rights Reserved</p>
+        <p class="text-muted small">© 2025 Jahangirnagar University | All Rights Reserved</p>
     </div>
 </div>
 
