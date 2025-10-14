@@ -327,7 +327,7 @@ include 'includes/header.php';
                     <i class="bi bi-trophy text-success"></i>
                 </div>
                 <h5 class="fw-bold">Election Results</h5>
-                <p class="text-muted small mb-0">View live results</p>
+                <p class="text-muted small mb-0">View results</p>
             </div>
         </a>
     </div>
