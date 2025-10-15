@@ -192,7 +192,7 @@ include '../includes/header.php';
                     </div>
                     
                     <div class="col-6 col-md-4 mb-3">
-                        <a href="../central/dashboard.php" class="btn btn-secondary w-100 d-flex flex-column align-items-center p-3">
+                        <a href="../central/monitor.php" class="btn btn-secondary w-100 d-flex flex-column align-items-center p-3">
                             <i class="bi bi-arrow-up-circle fs-2"></i>
                             <span class="mt-2">Central View</span>
                         </a>
