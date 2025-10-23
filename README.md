@@ -24,6 +24,53 @@ To set up and run the system, ensure you have:
 - MySQL: Version 8.0 or higher.
 - Browser: Modern browsers (Chrome, Firefox, Safari) for the frontend.
 - Optional: phpMyAdmin for database management.
+## Project Presentation : 
+[📄 View Project Presentation PDF](https://github.com/nafiszami/JUCSU_Election_Management/blob/main/assets/pdf/JUCSU-and-Hall-Union-Election-Management-System.pdf)
+## 📸 Project Screenshots  
+> Below are key interfaces from the **JUCSU and Hall Union Election Management System**, showing the workflow from homepage to election monitoring.
+
+### 🏠 Homepage
+![Homepage](assets/picture/homepage.png)
+
+---
+
+### 🧑‍🎓 Voter Dashboard
+![Voter Dashboard](assets/picture/voter_dashboard.png)
+
+---
+
+### 🗳️ Candidate Dashboard
+![Candidate Dashboard](assets/picture/candidate_dashboard.png)
+
+---
+
+### 🏢 Hall Commissioner Dashboard
+![Hall Commissioner Dashboard](assets/picture/hall_dashboard.png)
+
+---
+
+### 🏛️ Central Commissioner Dashboard
+![Central Commissioner Dashboard](assets/picture/central_dashboard.png)
+
+---
+
+### 🗳️ Voting Interface
+![Voting Interface](assets/picture/voting_interface.png)
+
+---
+
+### 👥 Show Candidates
+![Show Candidate](assets/picture/show_candidate.png)
+
+---
+
+### 📊 Election Monitor
+![Election Monitor](assets/picture/election_monitor.png)
+
+> 🗂️ All screenshots are stored in the `assets/picture/` directory within the repository.
+
+
+
 
 
 
